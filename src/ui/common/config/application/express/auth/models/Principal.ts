@@ -1,6 +1,6 @@
-import { interfaces } from "inversify-express-utils";
+import { interfaces } from 'inversify-express-utils';
 
-import { User } from "ui/common/models/User";
+import { User } from 'ui/common/models/User';
 
 export class Principal implements interfaces.Principal {
   public details: User | undefined;

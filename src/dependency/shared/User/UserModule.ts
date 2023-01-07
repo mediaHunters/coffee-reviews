@@ -1,20 +1,20 @@
-import { interfaces } from "inversify";
+import { interfaces } from 'inversify';
 
-import { BaseModule } from "dependency/BaseModule";
-import { IUserService } from "core/applicationServices/User/IUserService";
+import { BaseModule } from 'dependency/BaseModule';
+import { IUserService } from 'core/applicationServices/User/IUserService';
 
-import { IUserRepository } from "core/domainServices/User/IUserRepository";
+import { IUserRepository } from 'core/domainServices/User/IUserRepository';
 
 import {
   DOMAIN_APPLICATION_SERVICE_IDENTIFIERS,
   DOMAIN_REPOSITORY_IDENTIFIERS,
-  DOMAIN_UNIT_OF_WORK_IDENTIFIERS
-} from "core/CoreModuleSymbols";
+  DOMAIN_UNIT_OF_WORK_IDENTIFIERS,
+} from 'core/CoreModuleSymbols';
 
-import { UserRepository } from "infrastructure/database/repository/User/UserRepository";
-import { IUserUnitOfWork } from "core/domainServices/User/IUserUnitOfWork";
-import { UserService } from "core/applicationServices/User/UserService";
-import { UserUnitOfWork } from "infrastructure/database/repository/User/UserUnitOfWork";
+import { UserRepository } from 'infrastructure/database/repository/User/UserRepository';
+import { IUserUnitOfWork } from 'core/domainServices/User/IUserUnitOfWork';
+import { UserService } from 'core/applicationServices/User/UserService';
+import { UserUnitOfWork } from 'infrastructure/database/repository/User/UserUnitOfWork';
 
 export class UserModule extends BaseModule {
   constructor() {

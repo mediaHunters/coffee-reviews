@@ -1,0 +1,5 @@
+export enum CoffeeBurnLvl {
+  LIGHT_ROAST = 'LIGHT_ROAST',
+  MEDUIM_ROAST = 'MEDIUM_ROAST',
+  DARK_ROAST = 'DARK_ROAST',
+}

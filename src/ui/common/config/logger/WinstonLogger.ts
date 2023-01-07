@@ -1,14 +1,14 @@
-import { format as winstonFormat, Logger, transports } from "winston";
-import { Format } from "logform";
-import DailyRotateFile from "winston-daily-rotate-file";
+import { format as winstonFormat, Logger, transports } from 'winston';
+import { Format } from 'logform';
+import DailyRotateFile from 'winston-daily-rotate-file';
 
-import { inject, injectable } from "inversify";
+import { inject, injectable } from 'inversify';
 
-import { BaseLogger } from "ui/common/config/logger/BaseLogger";
-import { ILogger } from "ui/common/config/logger/ILogger";
+import { BaseLogger } from 'ui/common/config/logger/BaseLogger';
+import { ILogger } from 'ui/common/config/logger/ILogger';
 
-import { UI_APPLICATION_IDENTIFIERS } from "ui/UIModuleSymbols";
-import { IS_DEVELOPMENT } from "ui/common/config/consts/variables";
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UIModuleSymbols';
+import { IS_DEVELOPMENT } from 'ui/common/config/consts/variables';
 
 @injectable()
 export class WinstonLogger extends BaseLogger<Logger> implements ILogger {
@@ -24,19 +24,19 @@ export class WinstonLogger extends BaseLogger<Logger> implements ILogger {
 
   public initialize(): void {
     const loggerConfig = {
-      datePattern: "YYYY-MM-DD",
-      dirname: "./logs",
+      datePattern: 'YYYY-MM-DD',
+      dirname: './logs',
       format: this.format,
-      maxFiles: "14d",
-      maxSize: "20m",
-      zippedArchive: true
+      maxFiles: '14d',
+      maxSize: '20m',
+      zippedArchive: true,
     };
 
     this.logger.add(
       new DailyRotateFile({
-        filename: "cr-%DATE%.info.log",
-        level: "info",
-        ...loggerConfig
+        filename: 'cr-%DATE%.info.log',
+        level: 'info',
+        ...loggerConfig,
       })
     );
 
@@ -45,7 +45,7 @@ export class WinstonLogger extends BaseLogger<Logger> implements ILogger {
         new transports.Console({
           format: winstonFormat.combine(winstonFormat.colorize(), this.format),
           handleExceptions: true,
-          level: "debug"
+          level: 'debug',
         })
       );
     }

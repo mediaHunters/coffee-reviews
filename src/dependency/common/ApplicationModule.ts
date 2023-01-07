@@ -1,20 +1,20 @@
-import { Format } from "logform";
-import { createLogger, format, Logger } from "winston";
-import express from "express";
-import { interfaces } from "inversify";
-import "ui/index";
+import { Format } from 'logform';
+import { createLogger, format, Logger } from 'winston';
+import express from 'express';
+import { interfaces } from 'inversify';
+import 'ui/index';
 
-import { BaseModule } from "dependency/BaseModule";
+import { BaseModule } from 'dependency/BaseModule';
 
-import { IApplication } from "ui/common/config/application/common/IApplication";
-import { ExpressApplication } from "ui/common/config/application/express/ExpressApplication";
-import { ILogger } from "ui/common/config/logger/ILogger";
-import { WinstonLogger } from "ui/common/config/logger/WinstonLogger";
-import { UI_APPLICATION_IDENTIFIERS } from "ui/UIModuleSymbols";
-import { LOG_LEVEL } from "ui/common/config/consts/variables";
-import { IAuthenticationHandler } from "ui/common/config/application/common/auth/IAuthenticationHandler";
-import { JWTAuthenticationHandler } from "ui/common/config/application/express/auth/JWTAuthenticationHandler";
-import { JWTTokenUtil } from "ui/common/config/application/common/auth/utils/JWTTokenUtil";
+import { IApplication } from 'ui/common/config/application/common/IApplication';
+import { ExpressApplication } from 'ui/common/config/application/express/ExpressApplication';
+import { ILogger } from 'ui/common/config/logger/ILogger';
+import { WinstonLogger } from 'ui/common/config/logger/WinstonLogger';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UIModuleSymbols';
+import { LOG_LEVEL } from 'ui/common/config/consts/variables';
+import { IAuthenticationHandler } from 'ui/common/config/application/common/auth/IAuthenticationHandler';
+import { JWTAuthenticationHandler } from 'ui/common/config/application/express/auth/JWTAuthenticationHandler';
+import { JWTTokenUtil } from 'ui/common/config/application/common/auth/utils/JWTTokenUtil';
 
 export class ApplicationModule extends BaseModule {
   constructor() {
@@ -49,7 +49,7 @@ export class ApplicationModule extends BaseModule {
       express.Router({
         caseSensitive: false,
         mergeParams: false,
-        strict: false
+        strict: false,
       })
     );
   }
@@ -68,16 +68,16 @@ export class ApplicationModule extends BaseModule {
     bind<Format>(UI_APPLICATION_IDENTIFIERS.LOGGER_FORMAT).toConstantValue(
       format.combine(
         format.colorize({
-          all: true
+          all: true,
         }),
         format.label({
-          label: "[LOGGER]"
+          label: '[LOGGER]',
         }),
         format.timestamp({
-          format: "YY-MM-DD HH:MM:SS"
+          format: 'YY-MM-DD HH:MM:SS',
         }),
         format.printf(
-          info =>
+          (info) =>
             `${info.label} ${info.timestamp} [${info.level}] : ${info.message} `
         )
       )
@@ -88,7 +88,7 @@ export class ApplicationModule extends BaseModule {
     bind<Logger>(UI_APPLICATION_IDENTIFIERS.LOGGER).toConstantValue(
       createLogger({
         exitOnError: false,
-        level: LOG_LEVEL
+        level: LOG_LEVEL,
       })
     );
   }

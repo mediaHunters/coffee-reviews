@@ -1,18 +1,18 @@
-import { interfaces } from "inversify";
+import { interfaces } from 'inversify';
 
-import { BaseModule } from "dependency/BaseModule";
+import { BaseModule } from 'dependency/BaseModule';
 
-import { DBMapper } from "infrastructure/database/mappings/DBMapper";
-import { CROrm } from "infrastructure/database/orm/CROrm";
-import { IOrm } from "infrastructure/database/orm/IOrm";
+import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
+import { CROrm } from 'infrastructure/database/orm/CROrm';
+import { IOrm } from 'infrastructure/database/orm/IOrm';
 
 import {
   DATABASE_IDENTIFIERS,
-  INFRASTRUCTURE_IDENTIFIERS
-} from "infrastructure/InfrastructureModuleSymbols";
+  INFRASTRUCTURE_IDENTIFIERS,
+} from 'infrastructure/InfrastructureModuleSymbols';
 
-import { UIMapper } from "ui/common/mappings/UIMapper";
-import { UI_IDENTIFIERS } from "ui/UIModuleSymbols";
+import { UIMapper } from 'ui/common/mappings/UIMapper';
+import { UI_IDENTIFIERS } from 'ui/UIModuleSymbols';
 
 export class CommonModule extends BaseModule {
   constructor() {

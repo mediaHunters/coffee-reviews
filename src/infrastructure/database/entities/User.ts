@@ -1,6 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 
-import { Role } from "infrastructure/database/entities/Role";
+import type { Role } from 'infrastructure/database/entities/Role';
 
 @Entity()
 export class User {
@@ -22,9 +22,6 @@ export class User {
   @Column()
   password!: string;
 
-  @ManyToOne(
-    () => Role,
-    role => role.user
-  )
+  @ManyToOne('Role', (role: Role) => role.user)
   role!: Role;
 }

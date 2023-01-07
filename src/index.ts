@@ -1,13 +1,13 @@
-import "reflect-metadata";
+import 'reflect-metadata';
 
-import { InversifyExpressServer } from "inversify-express-utils";
+import { InversifyExpressServer } from 'inversify-express-utils';
 
-import { AppContainer } from "dependency/AppContainer";
-import { ExpressApplication } from "ui/common/config/application/express/ExpressApplication";
-import { PORT } from "ui/common/config/consts/variables";
-import { UI_APPLICATION_IDENTIFIERS } from "ui/UIModuleSymbols";
-import { IOrm } from "infrastructure/database/orm/IOrm";
-import { DATABASE_IDENTIFIERS } from "infrastructure/InfrastructureModuleSymbols";
+import { AppContainer } from 'dependency/AppContainer';
+import { ExpressApplication } from 'ui/common/config/application/express/ExpressApplication';
+import { PORT } from 'ui/common/config/consts/variables';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UIModuleSymbols';
+import { IOrm } from 'infrastructure/database/orm/IOrm';
+import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 
 (async () => {
   const appContainer = new AppContainer();

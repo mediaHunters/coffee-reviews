@@ -1,10 +1,10 @@
-import { Mapper } from "@wufe/mapper";
-import { IMapperConfiguration } from "@wufe/mapper/types/conf/mapper.configuration";
+import { Mapper } from '@wufe/mapper';
+import { IMapperConfiguration } from '@wufe/mapper/types/conf/mapper.configuration';
 
-import { injectable } from "inversify";
+import { injectable } from 'inversify';
 
-import { RoleEntityToRoleDomain } from "infrastructure/database/mappings/Role/RoleEntityToRoleDomain";
-import { UserEntityToUserDomain } from "infrastructure/database/repository/User/UserEntityToUserDomain";
+import { RoleEntityToRoleDomain } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomain';
+import { UserEntityToUserDomain } from 'infrastructure/database/repository/User/UserEntityToUserDomain';
 
 @injectable()
 export class DBMapper {

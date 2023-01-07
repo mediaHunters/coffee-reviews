@@ -1,16 +1,16 @@
-import { inject, injectable } from "inversify";
+import { inject, injectable } from 'inversify';
 
-import { DOMAIN_REPOSITORY_IDENTIFIERS } from "core/CoreModuleSymbols";
-import { User } from "core/domain/User/User";
-import { IUserRepository } from "core/domainServices/User/IUserRepository";
-import { IUserUnitOfWork } from "core/domainServices/User/IUserUnitOfWork";
-import { AddUserUnitOfWorkRepositoryCommand } from "core/domainServices/User/request/UnitOfWorkRepository/command/AddUserUnitOfWorkRepositoryCommand";
-import { DeleteUserUnitOfWorkRepositoryCommand } from "core/domainServices/User/request/UnitOfWorkRepository/command/DeleteUserUnitOfWorkRepositoryCommand";
-import { FindRoleByNameRepositoryQuery } from "core/domainServices/Role/requests/UnitOfWork/query/FindRoleByNameRepositoryQuery";
-import { AddUserRepositoryCommand } from "core/domainServices/Role/requests/repository/command/AddUserRepositoryCommand";
-import { IRoleRepository } from "core/domainServices/Role/IRoleRepository";
+import { DOMAIN_REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import { User } from 'core/domain/User/User';
+import { IUserRepository } from 'core/domainServices/User/IUserRepository';
+import { IUserUnitOfWork } from 'core/domainServices/User/IUserUnitOfWork';
+import { AddUserUnitOfWorkRepositoryCommand } from 'core/domainServices/User/request/UnitOfWorkRepository/command/AddUserUnitOfWorkRepositoryCommand';
+import { DeleteUserUnitOfWorkRepositoryCommand } from 'core/domainServices/User/request/UnitOfWorkRepository/command/DeleteUserUnitOfWorkRepositoryCommand';
+import { FindRoleByNameRepositoryQuery } from 'core/domainServices/Role/requests/repository/query/FindRoleByNameRepositoryQuery';
+import { AddUserRepositoryCommand } from 'core/domainServices/Role/requests/repository/command/AddUserRepositoryCommand';
+import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
 
-import { USER_ROLE } from "infrastructure/database/enum/UserRole";
+import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
 
 @injectable()
 export class UserUnitOfWork implements IUserUnitOfWork {
@@ -24,7 +24,7 @@ export class UserUnitOfWork implements IUserUnitOfWork {
   async addUser({
     email,
     password,
-    nickname
+    nickname,
   }: AddUserUnitOfWorkRepositoryCommand): Promise<User> {
     const { id } = await this.roleRepository.findRoleByName(
       new FindRoleByNameRepositoryQuery(USER_ROLE.MEMBER)

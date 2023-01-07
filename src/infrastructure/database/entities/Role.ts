@@ -1,7 +1,7 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
-import { USER_ROLE } from "infrastructure/database/enum/UserRole";
-import { User } from "infrastructure/database/entities";
+import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
+import type { User } from 'infrastructure/database/entities/User';
 
 @Entity()
 export class Role {
@@ -12,13 +12,10 @@ export class Role {
     default: USER_ROLE.MEMBER,
     enum: USER_ROLE,
     nullable: false,
-    type: "enum"
+    type: 'enum',
   })
   name!: string;
 
-  @OneToMany(
-    () => User,
-    user => user.role
-  )
+  @OneToMany('User', (user: User) => user.role)
   user!: User;
 }

@@ -1,16 +1,16 @@
-import { IncomingHttpHeaders } from "http";
+import { IncomingHttpHeaders } from 'http';
 
-import jwt, { Secret } from "jsonwebtoken";
-import { injectable } from "inversify";
+import jwt, { Secret } from 'jsonwebtoken';
+import { injectable } from 'inversify';
 
-import { APP_TOKEN_SECRET } from "ui/common/config/consts/variables";
-import { User } from "ui/common/models/User";
+import { APP_TOKEN_SECRET } from 'ui/common/config/consts/variables';
+import { User } from 'ui/common/models/User';
 
 @injectable()
 export class JWTTokenUtil {
-  private readonly AUTH_HEADER = "authorization";
+  private readonly AUTH_HEADER = 'authorization';
 
-  private readonly SCHEME = "bearer";
+  private readonly SCHEME = 'bearer';
 
   private readonly MATCHER = /(\S+)\s+(\S+)/;
 
@@ -21,7 +21,7 @@ export class JWTTokenUtil {
     payloadKey?: string
   ): string {
     return jwt.sign(payloadKey ? { [payloadKey]: payload } : payload, secret, {
-      expiresIn
+      expiresIn,
     });
   }
 

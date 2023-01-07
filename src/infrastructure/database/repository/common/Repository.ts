@@ -1,18 +1,19 @@
-import { AbstractRepository, getRepository, ObjectLiteral } from "typeorm";
-import { injectable } from "inversify";
+import { AbstractRepository, getRepository, ObjectLiteral } from 'typeorm';
+import { injectable } from 'inversify';
 
-import { ObjectType } from "typeorm/common/ObjectType";
+import { ObjectType } from 'typeorm/common/ObjectType';
 
-import { Repository as ORMRepository } from "typeorm/repository/Repository";
+import { Repository as ORMRepository } from 'typeorm/repository/Repository';
 
-import { IRepository } from "infrastructure/database/repository/common/IRepository";
-import { Query } from "infrastructure/database/repository/common/Query";
-import { UpdateQueryData } from "infrastructure/database/repository/common/UpdateQueryData";
+import { IRepository } from 'infrastructure/database/repository/common/IRepository';
+import { Query } from 'infrastructure/database/repository/common/Query';
+import { UpdateQueryData } from 'infrastructure/database/repository/common/UpdateQueryData';
 
 @injectable()
 export abstract class Repository<E extends ObjectLiteral>
   extends AbstractRepository<E>
-  implements IRepository<E, ORMRepository<E>> {
+  implements IRepository<E, ORMRepository<E>>
+{
   constructor(protected readonly entity: ObjectType<E>) {
     super();
   }
