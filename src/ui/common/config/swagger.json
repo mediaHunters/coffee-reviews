@@ -1,0 +1,62 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "CR API",
+    "description": "Api documentation for CR project \n",
+    "contact": {
+      "name": "MediaHunters"
+    },
+    "license": {
+      "name": "[PUT LICENSE NAME HERE]"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "auth",
+      "description": "Api endpoints related to authentication"
+    }
+  ],
+  "securityDefinitions": {
+    "bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "schemes": ["http", "https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/user": {
+      "delete": {
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": ["user"],
+        "description": "User endpoint",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserDeleteRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns authentication token"
+          }
+        }
+      }
+    }
+  }
+}

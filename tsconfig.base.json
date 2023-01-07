@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "dist",
+      "strict": true,
+      "sourceMap": true,
+      "moduleResolution": "node",
+      "lib": [
+        "es5",
+        "es6",
+        "dom"
+      ],
+      "plugins": [
+        { "transform": "@zerollup/ts-transform-paths" }
+      ],
+      "esModuleInterop": true
+    },
+    "include": [
+      "src/**/*.ts",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  
