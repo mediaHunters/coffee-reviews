@@ -8,7 +8,7 @@ import { IUserRepository } from 'core/domainServices/User/IUserRepository';
 
 import { GetUsersRepositoryQuery } from 'core/domainServices/User/request/Repository/query/GetUsersRepositoryQuery';
 import {
-  DOMAIN_APPLICATION_SERVICE_IDENTIFIERS,
+  DOMAIN_REPOSITORY_IDENTIFIERS,
   DOMAIN_UNIT_OF_WORK_IDENTIFIERS,
 } from 'core/CoreModuleSymbols';
 import { RemoveUserCommand } from 'core/applicationServices/User/requests/command/RemoveUserCommand';
@@ -18,7 +18,7 @@ import { DeleteUserUnitOfWorkRepositoryCommand } from 'core/domainServices/User/
 @injectable()
 export class UserService implements IUserService {
   constructor(
-    @inject(DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.USER_REPOSITORY)
+    @inject(DOMAIN_REPOSITORY_IDENTIFIERS.USER_REPOSITORY)
     private readonly userRepository: IUserRepository,
     @inject(DOMAIN_UNIT_OF_WORK_IDENTIFIERS.USER_UNIT_OF_WORK)
     private readonly userUnitOfWork: IUserUnitOfWork

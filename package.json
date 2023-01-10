@@ -7,13 +7,14 @@
     "build": "ttsc -p tsconfig.json",
     "serve": "yarn build && node dist/index.js",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "dev": "nodemon",
+    "dev": "npm run db:migrate && nodemon",
     "format": "prettier **/*.ts --write",
     "lint": "npx eslint --fix  ./**/*.ts",
     "db:seed": "ts-node -r tsconfig-paths/register -r dotenv/config node_modules/typeorm-seeding/dist/cli.js seed -n ormconfig.js -c default",
     "db:reload": "ts-node src/infrastructure/database/cli/dbReload.ts reload",
     "db:migrate": "ts-node -r tsconfig-paths/register node_modules\\typeorm\\cli.js migration:run",
-    "db:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n"
+    "db:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n",
+    "db:packet": "npm run db:reload && npm run db:migrate && npm run db:seed"
   },
   "lint-staged": {
     "src/**/*.ts": [

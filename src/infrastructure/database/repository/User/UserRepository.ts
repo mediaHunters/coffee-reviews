@@ -11,7 +11,7 @@ import {
 import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
 import { User } from 'core/domain/User/User';
 import { User as UserEntity } from 'infrastructure/database/entities/User';
-import { AddUserRepositoryCommand } from 'core/domainServices/Role/requests/repository/command/AddUserRepositoryCommand';
+import { AddUserRepositoryCommand } from 'core/domainServices/User/request/Repository/command/AddUserRepositoryCommand';
 import { Repository } from 'infrastructure/database/repository/common/Repository';
 import { Role } from 'infrastructure/database/entities/Role';
 import { FindUserByEmailRepositoryQuery } from 'core/domainServices/User/request/Repository/query/FindUserByEmailRepositoryQuery';
@@ -66,7 +66,7 @@ export class UserRepository
       .leftJoinAndSelect('User.role', 'Role')
       .where('User.id = :id ', { id })
       .getOne();
-    // eslint-disable-next-line no-console
+
     if (!result) {
       throw new BaseError(
         InfrastructureErrors[InfrastructureErrors.USER_NOT_FOUND]
@@ -108,8 +108,7 @@ export class UserRepository
       .leftJoinAndSelect('User.role', 'Role')
       .where('User.id = :id ', { id })
       .getOne();
-    // eslint-disable-next-line no-console
-    console.log('id', id);
+
     if (!result) {
       throw new BaseError(
         InfrastructureErrors[InfrastructureErrors.USER_NOT_FOUND]

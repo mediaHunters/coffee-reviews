@@ -34,7 +34,7 @@ export abstract class Repository<E extends ObjectLiteral>
     return this.getDBRepository().find();
   }
 
-  public async query(query: string, parameters?: unknown[]): Promise<E[]> {
+  public async query(query: string, parameters?: any[]): Promise<E[]> {
     return this.getDBRepository().query(query, parameters);
   }
 

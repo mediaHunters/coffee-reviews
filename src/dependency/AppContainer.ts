@@ -14,6 +14,7 @@ import { AuthenticationModule } from 'dependency/shared/Authentication/Authentic
 import { UserModule } from 'dependency/shared/User/UserModule';
 import { RoleModule } from 'dependency/Administration/RoleModule';
 import { ApplicationAuthProvider } from 'ui/common/config/application/express/auth/middlewares/ApplicationAuthProvider';
+import { CoffeeModule } from 'dependency/shared/Coffee/CoffeeModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -31,6 +32,7 @@ export class AppContainer extends BaseContainer {
     this.initializeSharedNamespace();
     this.provideUserModule();
     this.provideRoleModule();
+    this.provideCoffeModule();
   }
 
   private initializeSharedNamespace(): void {
@@ -51,6 +53,10 @@ export class AppContainer extends BaseContainer {
 
   private provideUserModule(): void {
     this.load(new UserModule());
+  }
+
+  private provideCoffeModule(): void {
+    this.load(new CoffeeModule());
   }
 
   private provideRoleModule(): void {

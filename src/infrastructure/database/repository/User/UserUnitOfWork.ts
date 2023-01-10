@@ -7,7 +7,7 @@ import { IUserUnitOfWork } from 'core/domainServices/User/IUserUnitOfWork';
 import { AddUserUnitOfWorkRepositoryCommand } from 'core/domainServices/User/request/UnitOfWorkRepository/command/AddUserUnitOfWorkRepositoryCommand';
 import { DeleteUserUnitOfWorkRepositoryCommand } from 'core/domainServices/User/request/UnitOfWorkRepository/command/DeleteUserUnitOfWorkRepositoryCommand';
 import { FindRoleByNameRepositoryQuery } from 'core/domainServices/Role/requests/repository/query/FindRoleByNameRepositoryQuery';
-import { AddUserRepositoryCommand } from 'core/domainServices/Role/requests/repository/command/AddUserRepositoryCommand';
+import { AddUserRepositoryCommand } from 'core/domainServices/User/request/Repository/command/AddUserRepositoryCommand';
 import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
 
 import { USER_ROLE } from 'infrastructure/database/enum/UserRole';

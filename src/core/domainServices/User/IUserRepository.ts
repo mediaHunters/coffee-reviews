@@ -1,5 +1,5 @@
 import { User } from 'core/domain/User/User';
-import { AddUserRepositoryCommand } from 'core/domainServices/Role/requests/repository/command/AddUserRepositoryCommand';
+import { AddUserRepositoryCommand } from 'core/domainServices/User/request/Repository/command/AddUserRepositoryCommand';
 import { FindUserByEmailRepositoryQuery } from 'core/domainServices/User/request/Repository/query/FindUserByEmailRepositoryQuery';
 import { GetUserRepositoryQuery } from 'core/domainServices/User/request/Repository/query/GetUserRepositoryQuery';
 import { GetUsersRepositoryQuery } from 'core/domainServices/User/request/Repository/query/GetUsersRepositoryQuery';

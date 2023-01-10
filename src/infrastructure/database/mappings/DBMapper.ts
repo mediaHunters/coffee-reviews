@@ -5,6 +5,7 @@ import { injectable } from 'inversify';
 
 import { RoleEntityToRoleDomain } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomain';
 import { UserEntityToUserDomain } from 'infrastructure/database/repository/User/UserEntityToUserDomain';
+import { CoffeeEntityToCoffeeDomain } from 'infrastructure/database/repository/Coffee/CoffeEntityToCoffeeDomain';
 
 @injectable()
 export class DBMapper {
@@ -24,5 +25,6 @@ export class DBMapper {
   private initialize(): void {
     UserEntityToUserDomain().configureMapping(this.mapper);
     RoleEntityToRoleDomain().configureMapping(this.mapper);
+    CoffeeEntityToCoffeeDomain().configureMapping(this.mapper);
   }
 }

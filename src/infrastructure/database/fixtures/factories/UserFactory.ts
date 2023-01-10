@@ -6,15 +6,15 @@ import { User } from 'infrastructure/database/entities/User';
 
 const SALT = 10;
 const RANDOM_NUMBER_SIZE = 100;
+export const userDefined = new User();
 
 define(User, (faker: typeof Faker) => {
   const counter = faker.random.number(RANDOM_NUMBER_SIZE);
-  const user = new User();
 
-  user.email = `cr_user__${counter}@example.com`;
-  user.lastName = faker.name.lastName(counter);
-  user.firstName = faker.name.firstName();
-  user.password = hashSync('reer23EDQ@#', SALT);
+  userDefined.email = `cr_user__${counter}@example.com`;
+  userDefined.lastName = faker.name.lastName(counter);
+  userDefined.firstName = faker.name.firstName();
+  userDefined.password = hashSync('reer23EDQ@#', SALT);
 
-  return user;
+  return userDefined;
 });

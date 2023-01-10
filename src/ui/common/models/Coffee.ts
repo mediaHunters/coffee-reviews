@@ -1,3 +1,5 @@
+import { Review } from 'core/domain/Review/Review';
+
 export class Coffee {
   constructor(
     public readonly id: number,
@@ -8,7 +10,7 @@ export class Coffee {
     public readonly description: string,
     public readonly burntLvl: string,
     public readonly createdAt: Date,
-    public readonly reviews: number,
+    public readonly reviews: Review,
     public readonly reflink: string
   ) {}
 }
