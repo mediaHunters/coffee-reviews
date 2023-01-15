@@ -30,7 +30,7 @@ export class UserUnitOfWork implements IUserUnitOfWork {
       new FindRoleByNameRepositoryQuery(USER_ROLE.MEMBER)
     );
     return this.userRepository.addUser(
-      new AddUserRepositoryCommand(nickname, email, password, +id)
+      new AddUserRepositoryCommand(nickname, email, password, id)
     );
   }
 

@@ -4,7 +4,7 @@ import { IMapperConfiguration } from '@wufe/mapper/types/conf/mapper.configurati
 import { injectable } from 'inversify';
 
 import { RoleEntityToRoleDomain } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomain';
-import { UserEntityToUserDomain } from 'infrastructure/database/repository/User/UserEntityToUserDomain';
+import { UserEntityToUserDomain } from 'infrastructure/database/mappings/User/UserEntityToUserDomain';
 import { CoffeeEntityToCoffeeDomain } from 'infrastructure/database/repository/Coffee/CoffeEntityToCoffeeDomain';
 
 @injectable()

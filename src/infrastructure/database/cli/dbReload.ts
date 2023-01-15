@@ -14,7 +14,7 @@ const {
   logging,
   migrations,
   // eslint-disable-next-line import/no-dynamic-require, @typescript-eslint/no-var-requires
-} = require(join(process.cwd(), 'ormconfig.js'))[0];
+} = require(join(process.cwd(), 'ormconfig.js')).default[0];
 
 yargs
   .command({

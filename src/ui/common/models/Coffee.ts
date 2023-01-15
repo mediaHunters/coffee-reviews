@@ -2,7 +2,7 @@ import { Review } from 'core/domain/Review/Review';
 
 export class Coffee {
   constructor(
-    public readonly id: number,
+    public readonly id: string,
     public readonly brand: string,
     public readonly name: string,
     public readonly type: string,

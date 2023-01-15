@@ -1,3 +1,3 @@
 export class DeleteCoffeeCommandBody {
-  constructor(public readonly id: number) {}
+  constructor(public readonly id: string) {}
 }

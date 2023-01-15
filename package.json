@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "build": "ttsc -p tsconfig.json",
     "serve": "yarn build && node dist/index.js",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "dev": "npm run db:migrate && nodemon",
+    "dev": "npm run db:migrate && nodemon --experimental-modules --es-module-specifier-resolution=node index.ts",
     "format": "prettier **/*.ts --write",
     "lint": "npx eslint --fix  ./**/*.ts",
     "db:seed": "ts-node -r tsconfig-paths/register -r dotenv/config node_modules/typeorm-seeding/dist/cli.js seed -n ormconfig.js -c default",

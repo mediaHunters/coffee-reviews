@@ -1,4 +1,4 @@
-export class AddCoffeeCommandBody {
+export class CreateCoffeeCommandBody {
   constructor(
     public readonly brand: string,
     public readonly name: string,

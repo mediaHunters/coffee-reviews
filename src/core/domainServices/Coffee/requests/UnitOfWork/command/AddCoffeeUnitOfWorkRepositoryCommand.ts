@@ -1,4 +1,4 @@
-export class AddCoffeeUnitOfWorkRepositoryCommand {
+export class CreateCoffeeUnitOfWorkRepositoryCommand {
   constructor(
     public readonly brand: string,
     public readonly name: string,

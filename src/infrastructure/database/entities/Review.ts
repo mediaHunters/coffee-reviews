@@ -1,31 +1,36 @@
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  OneToOne,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 
-import type { User } from 'infrastructure/database/entities/User';
 import type { Coffee } from 'infrastructure/database/entities/Coffee';
+import type { User } from 'infrastructure/database/entities/User';
+import Model from 'infrastructure/database/entities/Base';
 
 @Entity()
-export class Review {
-  @PrimaryGeneratedColumn()
-  id!: number;
-
+export class Review extends Model {
   @Column()
   rating!: number;
 
-  @ManyToOne('Coffee', (Coffee: Coffee) => Coffee.reviews)
+  @Column()
+  look!: number;
+
+  @Column()
+  smell!: number;
+
+  @Column()
+  taste!: number;
+
+  @Column()
+  coffeeId!: string;
+
+  @ManyToOne('Coffee', (Coffee: Coffee) => Coffee.reviews, {
+    onDelete: 'CASCADE',
+  })
   @JoinColumn()
   coffee!: Coffee;
 
-  @Column()
-  userId!: number;
+  @Column({ nullable: true })
+  userId!: string;
 
-  @OneToOne('User')
+  @ManyToOne('User', (user: User) => user.reviews)
   @JoinColumn()
   user!: User;
 }

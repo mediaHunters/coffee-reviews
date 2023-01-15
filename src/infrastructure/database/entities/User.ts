@@ -1,19 +1,11 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
-  OneToMany,
-} from 'typeorm';
+import { Entity, Column, ManyToOne, OneToMany } from 'typeorm';
 
 import type { Role } from 'infrastructure/database/entities/Role';
 import type { Review } from 'infrastructure/database/entities/Review';
+import Model from 'infrastructure/database/entities/Base';
 
 @Entity()
-export class User {
-  @PrimaryGeneratedColumn()
-  id!: number;
-
+export class User extends Model {
   @Column({
     nullable: true,
   })
@@ -30,7 +22,6 @@ export class User {
   @Column()
   email!: string;
 
-  // hide password from user
   @Column()
   password!: string;
 
@@ -38,5 +29,12 @@ export class User {
   role!: Role;
 
   @OneToMany('Review', (review: Review) => review.user)
-  review!: Review[];
+  reviews!: Review[];
+
+  toJson() {
+    return {
+      ...this,
+      password: undefined,
+    };
+  }
 }

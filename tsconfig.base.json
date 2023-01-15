@@ -10,6 +10,7 @@
       "strict": true,
       "sourceMap": true,
       "moduleResolution": "node",
+      "allowJs": true,
       "lib": [
         "es5",
         "es6",
@@ -20,11 +21,14 @@
       ],
       "esModuleInterop": true
     },
-    "include": [
-      "src/**/*.ts",
-    ],
+    "ts-node": {
+      "compilerOptions": {
+        "module": "commonjs"
+      }
+    },
+    "include": ["src/**/*"],
     "exclude": [
-      "node_modules"
+      "node_modules",
     ]
   }
   

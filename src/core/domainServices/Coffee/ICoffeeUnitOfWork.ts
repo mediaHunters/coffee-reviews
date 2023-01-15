@@ -1,8 +1,8 @@
 import { Coffee } from 'core/domain/Coffee/Coffee';
-import { AddCoffeeUnitOfWorkRepositoryCommand } from 'core/domainServices/Coffee/requests/UnitOfWork/command/AddCoffeeUnitOfWorkRepositoryCommand';
-import { DeleteUserUnitOfWorkRepositoryCommand } from 'core/domainServices/User/request/UnitOfWorkRepository/command/DeleteUserUnitOfWorkRepositoryCommand';
+import { CreateCoffeeUnitOfWorkRepositoryCommand } from 'core/domainServices/Coffee/requests/UnitOfWork/command/AddCoffeeUnitOfWorkRepositoryCommand';
+import { DeleteCoffeeUnitOfWorkRepositoryCommand } from 'core/domainServices/Coffee/requests/UnitOfWork/command/DeleteCoffeeUnitOfWorkRepositoryCommand';
 
 export interface ICoffeeUnitOfWork {
-  addUser(command: AddCoffeeUnitOfWorkRepositoryCommand): Promise<Coffee>;
-  deleteCoffee(command: DeleteUserUnitOfWorkRepositoryCommand): Promise<Coffee>;
+  create(command: CreateCoffeeUnitOfWorkRepositoryCommand): Promise<Coffee>;
+  delete(command: DeleteCoffeeUnitOfWorkRepositoryCommand): Promise<Coffee>;
 }

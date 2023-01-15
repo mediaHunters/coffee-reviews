@@ -1,21 +1,13 @@
-import {
-  Column,
-  CreateDateColumn,
-  Entity,
-  OneToMany,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 
 import { COFFEE_TYPE } from 'core/domain/Coffee/CoffeeType';
 import { COFFEE_BURNT_LVL } from 'core/domain/Coffee/CoffeeBurnLvl';
 import type { Review } from 'infrastructure/database/entities/Review';
 import { COFFEE_STATUS } from 'infrastructure/database/enum/CoffeStatus';
+import Model from 'infrastructure/database/entities/Base';
 
 @Entity()
-export class Coffee {
-  @PrimaryGeneratedColumn()
-  id!: number;
-
+export class Coffee extends Model {
   @Column()
   brand!: string;
 
@@ -42,12 +34,6 @@ export class Coffee {
   })
   burntLvl!: string;
 
-  @CreateDateColumn()
-  createdAt!: Date;
-
-  @OneToMany('Review', (Review: Review) => Review.coffee)
-  reviews!: Review[];
-
   @Column()
   reflink!: string;
 
@@ -57,4 +43,9 @@ export class Coffee {
     type: 'enum',
   })
   CoffeeStatus!: string;
+
+  @OneToMany('Review', (Review: Review) => Review.coffee, {
+    cascade: true,
+  })
+  reviews!: Review[];
 }

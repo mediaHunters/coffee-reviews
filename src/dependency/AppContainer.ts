@@ -15,6 +15,7 @@ import { UserModule } from 'dependency/shared/User/UserModule';
 import { RoleModule } from 'dependency/Administration/RoleModule';
 import { ApplicationAuthProvider } from 'ui/common/config/application/express/auth/middlewares/ApplicationAuthProvider';
 import { CoffeeModule } from 'dependency/shared/Coffee/CoffeeModule';
+import { ReviewModule } from 'dependency/shared/Review/ReviewModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -30,9 +31,11 @@ export class AppContainer extends BaseContainer {
     this.provideApplicationModule();
     this.provideInversifyExpressApplication();
     this.initializeSharedNamespace();
+
     this.provideUserModule();
     this.provideRoleModule();
     this.provideCoffeModule();
+    this.provideReviewModule();
   }
 
   private initializeSharedNamespace(): void {
@@ -53,6 +56,10 @@ export class AppContainer extends BaseContainer {
 
   private provideUserModule(): void {
     this.load(new UserModule());
+  }
+
+  private provideReviewModule(): void {
+    this.load(new ReviewModule());
   }
 
   private provideCoffeModule(): void {
