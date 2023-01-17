@@ -103,7 +103,7 @@ export class CoffeeController extends BaseHttpController {
     return this.json(result, OK);
   }
 
-  @httpDelete('/:id', isAuthenticated({ role: USER_ROLE.ADMIN }))
+  @httpDelete('/:id', isAuthenticated({ role: USER_ROLE.MEMBER }))
   async delete(
     @requestParam() { id }: DeleteCoffeeCommandBody
   ): Promise<results.JsonResult> {
@@ -112,10 +112,11 @@ export class CoffeeController extends BaseHttpController {
     return this.json(result, OK);
   }
 
-  @httpGet('/:coffeeId/reviews/', isAuthenticated({ role: USER_ROLE.MEMBER }))
-  async GetUserReviews(@requestBody() { userId }: GetUserReviewsQueryBody) {
-    const result = this.reviewService.getAll(new GetUserReviewsQuery(userId));
-
+  @httpGet('/:userId/reviews/', isAuthenticated({ role: USER_ROLE.MEMBER }))
+  async GetUserReviews(@requestParam() { userId }: GetUserReviewsQueryBody) {
+    const result = await this.reviewService.getAll(
+      new GetUserReviewsQuery(userId)
+    );
     return this.json(result, OK);
   }
 
@@ -128,7 +129,7 @@ export class CoffeeController extends BaseHttpController {
     @requestBody()
     { rating, look, smell, taste, userId }: AddReviewCommandBody
   ): Promise<results.JsonResult> {
-    const result = this.reviewService.add(
+    const result = await this.reviewService.add(
       new AddReviewCommand(userId, coffeeId, rating, look, smell, taste)
     );
     return this.json(result, OK);

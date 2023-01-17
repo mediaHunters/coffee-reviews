@@ -115,6 +115,7 @@ export class CoffeeRepository
     return updatedCoffee;
   }
 
+  // TODO: make it transational
   async deleteCoffee({ id }: DeleteCoffeeRepositoryCommand): Promise<Coffee> {
     const result = await this.custom()
       .createQueryBuilder()

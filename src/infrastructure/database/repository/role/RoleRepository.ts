@@ -10,7 +10,6 @@ import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { BaseError } from 'core/common/errors/BaseError';
 
 import { Role as RoleEntity } from 'infrastructure/database/entities/Role';
-import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
 import {
   DATABASE_MAPPING_IDENTIFIERS,
   INFRASTRUCTURE_IDENTIFIERS,
@@ -18,6 +17,7 @@ import {
 import { Repository } from 'infrastructure/database/repository/common/Repository';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 import { FindRoleByNameRepositoryQuery } from 'core/domainServices/Role/requests/repository/query/FindRoleByNameRepositoryQuery';
+import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
 
 @injectable()
 @EntityRepository(RoleEntity)

@@ -33,7 +33,7 @@ export class ReviewRepository
   async getReviews({ userId }: GetReviewsRepositoryQuery): Promise<Review[]> {
     const reviews = await this.custom()
       .createQueryBuilder()
-      .where('Review.id = :id ', { id: userId })
+      .where('Review.userId = :userId ', { userId })
       .getMany();
 
     return this.dbMapper.mapper.map<ReviewEntity[], Review[]>(
@@ -81,7 +81,7 @@ export class ReviewRepository
       .createQueryBuilder()
       .update(ReviewEntity)
       .set({ ...review })
-      .where('id = :id', { id: reviewId })
+      .where('id = :reviewId', { reviewId })
       .execute();
 
     return updatedReview;
@@ -92,7 +92,7 @@ export class ReviewRepository
   }: DeleteReviewRepositoryCommand): Promise<Review> {
     const result = await this.custom()
       .createQueryBuilder()
-      .where('Review.id = :id ', { reviewId })
+      .where('Review.id = :reviewsId ', { reviewId })
       .getOne();
 
     if (!result) {
