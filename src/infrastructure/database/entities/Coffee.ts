@@ -41,6 +41,7 @@ export class Coffee extends Model {
     enum: COFFEE_STATUS,
     nullable: false,
     type: 'enum',
+    default: COFFEE_STATUS.WAITING_QUEUE,
   })
   CoffeeStatus!: string;
 

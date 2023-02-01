@@ -1,5 +1,6 @@
 export enum InfrastructureErrors {
   USER_NOT_FOUND,
+  USER_ALREADY_EXIST,
   ROLE_NOT_FOUND,
   COFFEE_NOT_FOUND,
   REVIEW_NOT_FOUND,

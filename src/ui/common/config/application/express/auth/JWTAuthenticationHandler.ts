@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
 
-import { getStatusText, UNAUTHORIZED } from 'http-status-codes';
+import { NOT_FOUND } from 'http-status-codes';
 
 import {
   UI_APPLICATION_IDENTIFIERS,
@@ -44,10 +44,7 @@ export class JWTAuthenticationHandler implements IAuthenticationHandler {
   async authenticate(request: AuthenticationQuery) {
     const user = await this.authenticationService.verifyCredentials(request);
     if (!user) {
-      throw new UserInterfaceError(
-        UNAUTHORIZED,
-        getStatusText(UNAUTHORIZED).toUpperCase()
-      );
+      throw new UserInterfaceError(NOT_FOUND, 'USER_NOT_FOUND');
     }
 
     const userUi = this.uiMapper.mapper.map<User, UserUI>(
@@ -64,7 +61,8 @@ export class JWTAuthenticationHandler implements IAuthenticationHandler {
         APP_TOKEN_SECRET,
         APP_TOKEN_LIFE,
         PAYLOAD_KEY
-      )
+      ),
+      user
     );
   }
 }

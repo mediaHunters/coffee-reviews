@@ -19,6 +19,7 @@ import { GetUserRepositoryQuery } from 'core/domainServices/User/request/Reposit
 import { DeleteUserUnitOfWorkRepositoryCommand } from 'core/domainServices/User/request/UnitOfWorkRepository/command/DeleteUserUnitOfWorkRepositoryCommand';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 import { BaseError } from 'core/common/errors/BaseError';
+import { CheckIfUserAlreadyExistsRepositoryQuery } from 'core/domainServices/User/request/Repository/query/CheckIfUserAlreadyExistsRepositoryQuery';
 
 export class UserRepository
   extends Repository<UserEntity>
@@ -138,6 +139,26 @@ export class UserRepository
       users
     );
   }
-}
 
-// filter sort skip take
+  async checkIfUserAlreadyExists({
+    nickname,
+    email,
+  }: CheckIfUserAlreadyExistsRepositoryQuery): Promise<User[]> {
+    const result = await this.custom()
+      .createQueryBuilder()
+      .leftJoinAndSelect('User.role', 'role')
+      .where('User.nickname = :nickname OR User.email = :email', {
+        nickname,
+        email,
+      })
+      .getMany();
+
+    return this.dbMapper.mapper.map<UserEntity[], User[]>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+      },
+      result
+    );
+  }
+}

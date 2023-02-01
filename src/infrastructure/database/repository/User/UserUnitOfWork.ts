@@ -11,6 +11,9 @@ import { AddUserRepositoryCommand } from 'core/domainServices/User/request/Repos
 import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
 
 import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
+import { CheckIfUserAlreadyExistsRepositoryQuery } from 'core/domainServices/User/request/Repository/query/CheckIfUserAlreadyExistsRepositoryQuery';
+import { BaseError } from 'core/common/errors/BaseError';
+import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
 @injectable()
 export class UserUnitOfWork implements IUserUnitOfWork {
@@ -26,8 +29,17 @@ export class UserUnitOfWork implements IUserUnitOfWork {
     password,
     nickname,
   }: AddUserUnitOfWorkRepositoryCommand): Promise<User> {
+    const checkIfUserExist = await this.userRepository.checkIfUserAlreadyExists(
+      new CheckIfUserAlreadyExistsRepositoryQuery(nickname, email)
+    );
+
+    if (checkIfUserExist.length > 0) {
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.USER_ALREADY_EXIST]
+      );
+    }
     const { id } = await this.roleRepository.findRoleByName(
-      new FindRoleByNameRepositoryQuery(USER_ROLE.MEMBER)
+      new FindRoleByNameRepositoryQuery(USER_ROLE.ADMIN)
     );
     return this.userRepository.addUser(
       new AddUserRepositoryCommand(nickname, email, password, id)
