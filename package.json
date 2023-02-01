@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "build": "npx ttsc -p tsconfig.json",
-    "serve": "yarn build && node dist/index.js",
+    "build": "ttsc -p tsconfig.json",
+    "serve": "npm build && node dist/index.js",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
     "dev": "npm run db:migrate && nodemon --experimental-modules --es-module-specifier-resolution=node index.ts",
     "format": "prettier **/*.ts --write",
@@ -56,6 +56,7 @@
     "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.3",
+    "ttypescript": "^1.5.15",
     "type-graphql": "^1.1.1",
     "typeorm": "^0.2.45",
     "typeorm-seeding": "^1.6.1",
