@@ -37,6 +37,7 @@
     "@types/swagger-ui-express": "^4.1.1",
     "@types/yargs": "^15.0.1",
     "@wufe/mapper": "^0.5.0",
+    "@zerollup/ts-transform-paths": "^1.7.18",
     "apollo-server-express": "^3.11.1",
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
