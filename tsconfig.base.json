@@ -1,34 +1,30 @@
 {
-    "compilerOptions": {
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "allowSyntheticDefaultImports": true,
-      "resolveJsonModule": true,
-      "target": "es6",
-      "module": "commonjs",
-      "outDir": "dist",
-      "strict": true,
-      "sourceMap": true,
-      "moduleResolution": "node",
-      "allowJs": true,
-      "lib": [
-        "es5",
-        "es6",
-        "dom"
-      ],
-      "plugins": [
-        { "transform": "@zerollup/ts-transform-paths" }
-      ],
-      "esModuleInterop": true
-    },
-    "ts-node": {
-      "compilerOptions": {
-        "module": "commonjs"
-      }
-    },
-    "include": ["src/**/*"],
-    "exclude": [
-      "node_modules",
-    ]
-  }
-  
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ],
+    "plugins": [
+      { "transform": "@zerollup/ts-transform-paths" }
+    ],
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
