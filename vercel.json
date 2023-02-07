@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "devCommand": "cross-env NODE_ENV=production node dist/index.js",
     "builds": [
       {
         "src": "dist/index.js",
