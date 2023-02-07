@@ -2,7 +2,7 @@ import 'reflect-metadata';
 
 import { InversifyExpressServer } from 'inversify-express-utils';
 
-import { AppContainer } from 'dependency/AppContainer.js';
+import { AppContainer } from 'dependency/AppContainer';
 import { ExpressApplication } from 'ui/common/config/application/express/ExpressApplication';
 import { PORT } from 'ui/common/config/consts/variables';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UIModuleSymbols';

@@ -6,31 +6,31 @@ import Model from 'infrastructure/database/entities/Base';
 
 @Entity()
 export class Review extends Model {
-  @Column()
+  @Column('decimal')
   rating!: number;
 
-  @Column()
+  @Column('decimal')
   look!: number;
 
-  @Column()
+  @Column('decimal')
   smell!: number;
 
-  @Column()
+  @Column('decimal')
   taste!: number;
 
-  @Column()
+  @Column('text')
   coffeeId!: string;
 
   @ManyToOne('Coffee', (Coffee: Coffee) => Coffee.reviews, {
     onDelete: 'CASCADE',
   })
-  @JoinColumn()
+  @JoinColumn({ name: 'coffee', referencedColumnName: 'id' })
   coffee!: Coffee;
 
-  @Column({ nullable: true })
+  @Column('text', { nullable: true })
   userId!: string;
 
   @ManyToOne('User', (user: User) => user.reviews)
-  @JoinColumn()
+  @JoinColumn({ name: 'user', referencedColumnName: 'id' })
   user!: User;
 }

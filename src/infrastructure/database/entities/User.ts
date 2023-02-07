@@ -6,23 +6,23 @@ import Model from 'infrastructure/database/entities/Base';
 
 @Entity()
 export class User extends Model {
-  @Column({
+  @Column('text', {
     nullable: true,
   })
   firstName?: string;
 
-  @Column({
+  @Column('text', {
     nullable: true,
   })
   lastName?: string;
 
-  @Column({ unique: true })
+  @Column('text', { unique: true })
   nickname!: string;
 
-  @Column()
+  @Column('text')
   email!: string;
 
-  @Column()
+  @Column('text')
   password!: string;
 
   @ManyToOne('Role', (role: Role) => role.user)
@@ -31,7 +31,7 @@ export class User extends Model {
   @OneToMany('Review', (review: Review) => review.user)
   reviews!: Review[];
 
-  toJson() {
+  toJson(): any {
     return {
       ...this,
       password: undefined,

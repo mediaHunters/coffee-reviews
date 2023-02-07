@@ -8,10 +8,10 @@ import Model from 'infrastructure/database/entities/Base';
 
 @Entity()
 export class Coffee extends Model {
-  @Column()
+  @Column('text')
   brand!: string;
 
-  @Column()
+  @Column('text')
   name!: string;
 
   @Column({
@@ -21,10 +21,10 @@ export class Coffee extends Model {
   })
   type!: string;
 
-  @Column()
+  @Column('text')
   imgUrl!: string;
 
-  @Column()
+  @Column('text')
   description!: string;
 
   @Column({
@@ -34,7 +34,7 @@ export class Coffee extends Model {
   })
   burntLvl!: string;
 
-  @Column()
+  @Column('text')
   reflink!: string;
 
   @Column({

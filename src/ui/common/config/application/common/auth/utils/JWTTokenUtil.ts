@@ -33,7 +33,7 @@ export class JWTTokenUtil {
     }
   }
 
-  getTokenFromHeaders(headers: IncomingHttpHeaders): string | null {
+  getTokenFromHeaders(headers: IncomingHttpHeaders): any {
     const authHeader = headers[this.AUTH_HEADER];
     if (!authHeader) {
       return null;

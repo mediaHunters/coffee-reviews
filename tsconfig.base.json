@@ -2,15 +2,23 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "outDir": "dist",                          
+    "rootDir": "src",
+    "noImplicitAny": true,
     "resolveJsonModule": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "outDir": "dist",
+    "target": "es2020",
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "sourceMap": true,
-    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "noEmitOnError": true,
+    "removeComments": true,
     "lib": [
+      "ES2015",
       "es5",
       "es6",
       "dom"
@@ -18,7 +26,9 @@
     "plugins": [
       { "transform": "@zerollup/ts-transform-paths" }
     ],
-    "esModuleInterop": true
+  },
+  "tsc-alias": {
+    "resolveFullPaths": true
   },
   "include": [
     "src/**/*.ts",

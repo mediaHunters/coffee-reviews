@@ -99,7 +99,7 @@ export class UserRepository
         destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
         source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
       },
-      result[0]
+      result[0]!
     );
   }
 
