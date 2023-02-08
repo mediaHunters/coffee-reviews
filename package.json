@@ -52,7 +52,8 @@
     "typeorm-seeding": "^1.6.1",
     "typeorm-transactional-cls-hooked": "^0.1.20",
     "wireit": "^0.9.5",
-    "yargs": "^17.6.2"
+    "yargs": "^17.6.2",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
@@ -96,7 +97,6 @@
     "ttypescript": "^1.5.15",
     "typescript": "^4.4.4",
     "vercel": "^28.15.2",
-    "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.7.1"
   },
   "keywords": [],
