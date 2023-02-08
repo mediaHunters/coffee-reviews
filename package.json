@@ -59,9 +59,7 @@
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.7.1",
     "wireit": "^0.9.5",
-    "yargs": "^17.6.2"
-  },
-  "devDependencies": {
+    "yargs": "^17.6.2",
     "@types/bcrypt": "^3.0.0",
     "@types/chai": "^4.2.7",
     "@types/cors": "^2.8.6",
@@ -99,6 +97,9 @@
     "tsconfig-paths": "^3.14.1",
     "ttypescript": "^1.5.15",
     "vercel": "^28.15.2"
+  },
+  "devDependencies": {
+
   },
   "keywords": [],
   "author": "",
