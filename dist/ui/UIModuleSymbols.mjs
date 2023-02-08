@@ -1,0 +1,12 @@
+import {
+  UI_APPLICATION_IDENTIFIERS,
+  UI_IDENTIFIERS,
+  UI_MAPPINGS_IDENTIFIERS
+} from "../chunk-OHNY4ITV.mjs";
+import "../chunk-CT3ESYKG.mjs";
+export {
+  UI_APPLICATION_IDENTIFIERS,
+  UI_IDENTIFIERS,
+  UI_MAPPINGS_IDENTIFIERS
+};
+//# sourceMappingURL=UIModuleSymbols.mjs.map

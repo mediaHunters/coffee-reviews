@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../src/ui/portal/Coffee/requests/query/GetUserReviewsQueryBody.ts"],"sourcesContent":["export class GetUserReviewsQueryBody {\n  constructor(public readonly userId: string) {}\n}\n"],"mappings":";;;AAAO,IAAM,0BAAN,MAA8B;AAAA,EACnC,YAA4B,QAAgB;AAAhB;AAAA,EAAiB;AAC/C;","names":[]}

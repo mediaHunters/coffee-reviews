@@ -36,7 +36,6 @@ build/Release
 node_modules/
 jspm_packages/
 .logs
-dist
 .vercel
 # Typescript v1 declaration files
 src/@types/
@@ -65,8 +64,6 @@ src/@types/
 # intellij
 .idea
 *.iml
-
-# dist
 
 ormconfig.js
 

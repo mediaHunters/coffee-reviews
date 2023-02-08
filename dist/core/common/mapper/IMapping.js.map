@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/core/common/mapper/IMapping.ts"],"sourcesContent":["import { Mapper } from '@wufe/mapper';\n\nexport interface IMapping {\n  configureMapping(mapper: Mapper): void;\n}\n"],"mappings":";;;;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

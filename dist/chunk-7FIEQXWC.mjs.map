@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/dependency/BaseContainer.ts"],"sourcesContent":["import { Container } from 'inversify';\n\nexport abstract class BaseContainer extends Container {\n  public abstract init(): void;\n}\n"],"mappings":";AAAA,SAAS,iBAAiB;AAEnB,IAAe,gBAAf,cAAqC,UAAU;AAEtD;","names":[]}
