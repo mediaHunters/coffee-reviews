@@ -67,7 +67,6 @@ src/@types/
 *.iml
 
 # dist
-dist
 
 ormconfig.js
 
