@@ -1,1 +1,0 @@
-{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v16.13.1","command":"npx eslint --fix  ./**/*.ts","extraArgs":[],"clean":false,"files":{},"output":[],"dependencies":{},"env":{}}

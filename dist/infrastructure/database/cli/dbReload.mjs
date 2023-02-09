@@ -1,11 +1,15 @@
 import {
+  createConnection,
+  init_typeorm
+} from "../../../chunk-VSL3XMPJ.mjs";
+import {
   __require
-} from "../../../chunk-CT3ESYKG.mjs";
+} from "../../../chunk-IV6S7MV4.mjs";
 
 // src/infrastructure/database/cli/dbReload.ts
+init_typeorm();
 import { join } from "path";
 import * as yargs from "yargs";
-import { createConnection } from "typeorm";
 var {
   type,
   host,
@@ -16,7 +20,7 @@ var {
   logging,
   migrations
   // eslint-disable-next-line import/no-dynamic-require, @typescript-eslint/no-var-requires
-} = __require(join(process.cwd(), "ormconfig.js")).default[0];
+} = __require(join(process.cwd(), "ormconfig.cjs"))[0];
 yargs.command({
   command: "reload",
   describe: "Reload Database",

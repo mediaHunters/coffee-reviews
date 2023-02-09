@@ -1,4 +1,4 @@
-import "../../../chunk-CT3ESYKG.mjs";
+import "../../../chunk-IV6S7MV4.mjs";
 
 // src/core/domain/Coffee/CoffeeSearchCriteria.ts
 var CoffeeSearchCriteria = /* @__PURE__ */ ((CoffeeSearchCriteria2) => {

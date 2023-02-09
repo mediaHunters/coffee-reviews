@@ -1,7 +1,7 @@
 import {
   BaseModule
 } from "../chunk-5UD35LCP.mjs";
-import "../chunk-CT3ESYKG.mjs";
+import "../chunk-IV6S7MV4.mjs";
 export {
   BaseModule
 };

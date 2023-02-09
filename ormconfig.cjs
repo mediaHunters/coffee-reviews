@@ -1,15 +1,17 @@
 const dir = process.env.NODE_ENV === 'development' ? 'src' : 'dist';
 const ext = process.env.NODE_ENV === 'development' ? 't' : 'j';
+
 module.exports = [
   {
     type: 'postgres',
-    host: 'localhost',
+    host: process.env.ORM_HOST || 'localhost',
     port: 5432,
-    username: 'postgres',
-    password: 'postgres',
-    database: 'coffee-reviews-db',
+    username: process.env.ORM_USERNAME || 'postgres',
+    password: process.env.ORM_PASSWORD || 'postgres',
+    database: process.env.ORM_DB || 'coffee-reviews-db',
     logging: true,
     migrationsRun: true,
+    ssl: true,
     entities: [
       `${__dirname}/${dir}/infrastructure/database/entities/**/*.${ext}s`,
     ],
