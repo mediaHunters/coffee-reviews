@@ -113,9 +113,6 @@
         "src/**/*.ts",
         ".eslintignore",
         ".eslintrc.js"
-      ],
-      "dependencies": [
-        "lint:tsc"
       ]
     },
     "clean": {
