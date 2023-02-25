@@ -105,7 +105,7 @@
       "command": "cross-env NODE_ENV=production node dist/index.js"
     },
     "build": {
-      "command": "rimraf dist && tsup src/**/*.ts --format cjs,esm --dts"
+      "command": "rimraf dist && tsup src/**/*.ts --format cjs,esm --dts --keep-names --silent"
     },
     "lint": {
       "command": "eslint --fix --color --max-warnings 0 --cache --cache-location .eslintcache .",

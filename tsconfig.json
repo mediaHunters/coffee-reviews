@@ -2,6 +2,8 @@
     "extends": "./tsconfig.base.json",
     "compilerOptions": {
       "baseUrl": ".",
+      "rootDir": "./",
+      "outDir": "dist",
       "paths": {
         "core/*": ["src/core/*"],
         "dependency/*": ["src/dependency/*"],

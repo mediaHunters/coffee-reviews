@@ -1,7 +1,7 @@
 import {
   BaseApplication
-} from "../../../../../chunk-CYFBHW4K.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-MUJHLKES.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   BaseApplication
 };

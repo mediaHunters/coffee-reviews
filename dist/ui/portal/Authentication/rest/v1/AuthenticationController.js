@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -45,6 +46,7 @@ var SignUpCommand = class {
     this.password = password;
   }
 };
+__name(SignUpCommand, "SignUpCommand");
 
 // src/core/CoreModuleSymbols.ts
 var DOMAIN_APPLICATION_SERVICE_IDENTIFIERS = {
@@ -96,6 +98,7 @@ var AuthenticationQuery = class {
     this.password = password;
   }
 };
+__name(AuthenticationQuery, "AuthenticationQuery");
 
 // src/ui/portal/Authentication/rest/v1/AuthenticationController.ts
 var AuthenticationController = class extends import_inversify_express_utils.BaseHttpController {
@@ -125,6 +128,7 @@ var AuthenticationController = class extends import_inversify_express_utils.Base
     return this.json(authentication, import_http_status_codes.OK);
   }
 };
+__name(AuthenticationController, "AuthenticationController");
 __decorateClass([
   (0, import_inversify_express_utils.httpPost)("/signup"),
   __decorateParam(0, (0, import_inversify_express_utils.requestBody)())

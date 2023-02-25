@@ -1,7 +1,7 @@
 import {
   UpdateCoffeeCommand
-} from "../../../../../chunk-EB6IQL5Y.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-7UAE7MHQ.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   UpdateCoffeeCommand
 };

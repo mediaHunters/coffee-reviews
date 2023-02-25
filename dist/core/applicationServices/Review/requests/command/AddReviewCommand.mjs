@@ -1,7 +1,7 @@
 import {
   AddReviewCommand
-} from "../../../../../chunk-SE5MY7CD.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-QUOTCBOI.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   AddReviewCommand
 };

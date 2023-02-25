@@ -1,7 +1,7 @@
 import {
   GetUserReviewsQuery
-} from "../../../../../chunk-L6A6B2LO.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-IOHLQIPX.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   GetUserReviewsQuery
 };

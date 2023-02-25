@@ -5,6 +5,7 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -84,6 +85,7 @@ var BaseError = class {
     this.name = name;
   }
 };
+__name(BaseError, "BaseError");
 
 // src/ui/common/config/errors/UserInterfaceError.ts
 var UserInterfaceError = class extends BaseError {
@@ -95,6 +97,7 @@ var UserInterfaceError = class extends BaseError {
     this.name = name;
   }
 };
+__name(UserInterfaceError, "UserInterfaceError");
 
 // src/core/CoreModuleSymbols.ts
 var DOMAIN_APPLICATION_SERVICE_IDENTIFIERS = {
@@ -127,6 +130,7 @@ var Authentication = class {
     this.user = user;
   }
 };
+__name(Authentication, "Authentication");
 
 // src/ui/common/config/application/express/auth/JWTAuthenticationHandler.ts
 var PAYLOAD_KEY = "user";
@@ -159,6 +163,7 @@ var JWTAuthenticationHandler = class {
     );
   }
 };
+__name(JWTAuthenticationHandler, "JWTAuthenticationHandler");
 JWTAuthenticationHandler = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(UI_APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL)),

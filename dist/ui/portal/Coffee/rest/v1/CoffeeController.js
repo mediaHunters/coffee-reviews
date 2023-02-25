@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -65,13 +66,13 @@ var DOMAIN_UNIT_OF_WORK_IDENTIFIERS = {
 var import_http_status_codes = require("http-status-codes");
 
 // src/ui/common/config/application/express/auth/utils/getHttpContext.ts
-var getCurrentUser = (request) => {
+var getCurrentUser = /* @__PURE__ */ __name((request) => {
   const httpContext = Reflect.getMetadata(
     "inversify-express-utils:httpcontext",
     request
   );
   return httpContext.user;
-};
+}, "getCurrentUser");
 
 // src/core/common/errors/BaseError.ts
 var BaseError = class {
@@ -81,6 +82,7 @@ var BaseError = class {
     this.name = name;
   }
 };
+__name(BaseError, "BaseError");
 
 // src/ui/common/config/errors/UserInterfaceError.ts
 var UserInterfaceError = class extends BaseError {
@@ -92,9 +94,10 @@ var UserInterfaceError = class extends BaseError {
     this.name = name;
   }
 };
+__name(UserInterfaceError, "UserInterfaceError");
 
 // src/ui/common/config/application/express/auth/middlewares/isAuthenticated.ts
-var isAuthenticated = (config) => async (req, _res, next) => {
+var isAuthenticated = /* @__PURE__ */ __name((config) => async (req, _res, next) => {
   const user = getCurrentUser(req);
   if (!user) {
     next(
@@ -128,7 +131,7 @@ var isAuthenticated = (config) => async (req, _res, next) => {
     }
   }
   next();
-};
+}, "isAuthenticated");
 
 // src/core/applicationServices/Coffee/requests/command/DeleteCoffeeCommand.ts
 var DeleteCoffeeCommand = class {
@@ -136,6 +139,7 @@ var DeleteCoffeeCommand = class {
     this.id = id;
   }
 };
+__name(DeleteCoffeeCommand, "DeleteCoffeeCommand");
 
 // src/core/domainServices/Coffee/requests/UnitOfWork/query/FindCoffeeRepositoryQuery.ts
 var FindOneCoffeeRepositoryQuery = class {
@@ -143,6 +147,7 @@ var FindOneCoffeeRepositoryQuery = class {
     this.id = id;
   }
 };
+__name(FindOneCoffeeRepositoryQuery, "FindOneCoffeeRepositoryQuery");
 
 // src/core/applicationServices/Coffee/requests/command/AddCoffeeCommand.ts
 var CreateCoffeeCommand = class {
@@ -157,6 +162,7 @@ var CreateCoffeeCommand = class {
     this.reflink = reflink;
   }
 };
+__name(CreateCoffeeCommand, "CreateCoffeeCommand");
 
 // src/core/applicationServices/Coffee/requests/command/UpdateCoffeeCommand.ts
 var UpdateCoffeeCommand = class {
@@ -165,6 +171,7 @@ var UpdateCoffeeCommand = class {
     this.coffeeId = coffeeId;
   }
 };
+__name(UpdateCoffeeCommand, "UpdateCoffeeCommand");
 
 // src/core/applicationServices/Review/requests/query/GetUserReviewsQuery.ts
 var GetUserReviewsQuery = class {
@@ -172,6 +179,7 @@ var GetUserReviewsQuery = class {
     this.userId = userId;
   }
 };
+__name(GetUserReviewsQuery, "GetUserReviewsQuery");
 
 // src/core/applicationServices/Review/requests/command/AddReviewCommand.ts
 var AddReviewCommand = class {
@@ -184,6 +192,7 @@ var AddReviewCommand = class {
     this.taste = taste;
   }
 };
+__name(AddReviewCommand, "AddReviewCommand");
 
 // src/core/applicationServices/Review/requests/command/UpdateReviewCommand.ts
 var UpdateReviewCommand = class {
@@ -192,6 +201,7 @@ var UpdateReviewCommand = class {
     this.reviewId = reviewId;
   }
 };
+__name(UpdateReviewCommand, "UpdateReviewCommand");
 
 // src/core/applicationServices/Review/requests/command/DeleteReviewCommand.ts
 var DeleteReviewCommand = class {
@@ -199,6 +209,7 @@ var DeleteReviewCommand = class {
     this.reviewId = reviewId;
   }
 };
+__name(DeleteReviewCommand, "DeleteReviewCommand");
 
 // src/ui/portal/Coffee/rest/v1/CoffeeController.ts
 var CoffeeController = class extends import_inversify_express_utils.BaseHttpController {
@@ -279,6 +290,7 @@ var CoffeeController = class extends import_inversify_express_utils.BaseHttpCont
   //   );
   // }
 };
+__name(CoffeeController, "CoffeeController");
 __decorateClass([
   (0, import_inversify_express_utils.httpGet)("/")
 ], CoffeeController.prototype, "GetAll", 1);

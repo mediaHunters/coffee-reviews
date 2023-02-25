@@ -1,13 +1,15 @@
 import {
   User
-} from "../../../../chunk-TXHLZ6OS.mjs";
+} from "../../../../chunk-IOQQNHD2.mjs";
 import {
   Role
-} from "../../../../chunk-W4O4A6XN.mjs";
+} from "../../../../chunk-3C5KPKXZ.mjs";
 import "../../../../chunk-5MUR4BWO.mjs";
-import "../../../../chunk-KSFPCLC2.mjs";
-import "../../../../chunk-VSL3XMPJ.mjs";
-import "../../../../chunk-IV6S7MV4.mjs";
+import "../../../../chunk-YM6N2TQQ.mjs";
+import "../../../../chunk-RIQVZG47.mjs";
+import {
+  __name
+} from "../../../../chunk-C22X3M6A.mjs";
 
 // src/infrastructure/database/fixtures/seeds/UserSeed.ts
 var UserSeed = class {
@@ -36,6 +38,7 @@ var UserSeed = class {
     });
   }
 };
+__name(UserSeed, "UserSeed");
 export {
   UserSeed
 };

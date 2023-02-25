@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -42,6 +43,7 @@ var Role = class {
     this.name = name;
   }
 };
+__name(Role, "Role");
 
 // src/core/CoreModuleSymbols.ts
 var DOMAIN_APPLICATION_SERVICE_IDENTIFIERS = {
@@ -82,7 +84,7 @@ var DATABASE_MAPPING_IDENTIFIERS = {
 };
 
 // src/infrastructure/database/mappings/Role/RoleEntityToRoleDomain.ts
-var RoleEntityToRoleDomain = () => ({
+var RoleEntityToRoleDomain = /* @__PURE__ */ __name(() => ({
   configureMapping(mapper) {
     mapper.createMap(
       {
@@ -92,7 +94,7 @@ var RoleEntityToRoleDomain = () => ({
       Role
     );
   }
-});
+}), "RoleEntityToRoleDomain");
 
 // src/core/domain/User/User.ts
 var User = class {
@@ -106,9 +108,10 @@ var User = class {
     this.firstName = firstName;
   }
 };
+__name(User, "User");
 
 // src/infrastructure/database/mappings/User/UserEntityToUserDomain.ts
-var UserEntityToUserDomain = () => ({
+var UserEntityToUserDomain = /* @__PURE__ */ __name(() => ({
   configureMapping(mapper) {
     mapper.createMap(
       {
@@ -118,7 +121,7 @@ var UserEntityToUserDomain = () => ({
       User
     ).forMember("role", (opt) => opt.mapFrom((src) => src.role.name));
   }
-});
+}), "UserEntityToUserDomain");
 
 // src/core/domain/Coffee/Coffee.ts
 var Coffee = class {
@@ -135,9 +138,10 @@ var Coffee = class {
     this.reflink = reflink;
   }
 };
+__name(Coffee, "Coffee");
 
 // src/infrastructure/database/mappings/Coffee/CoffeEntityToCoffeeDomain.ts
-var CoffeeEntityToCoffeeDomain = () => ({
+var CoffeeEntityToCoffeeDomain = /* @__PURE__ */ __name(() => ({
   configureMapping(mapper) {
     mapper.createMap(
       {
@@ -147,7 +151,7 @@ var CoffeeEntityToCoffeeDomain = () => ({
       Coffee
     );
   }
-});
+}), "CoffeeEntityToCoffeeDomain");
 
 // src/core/domain/Review/Review.ts
 var Review = class {
@@ -161,9 +165,10 @@ var Review = class {
     this.userId = userId;
   }
 };
+__name(Review, "Review");
 
 // src/infrastructure/database/mappings/Review/ReviewEntityToReviewDomain.ts
-var ReviewEntityToReviewDomain = () => ({
+var ReviewEntityToReviewDomain = /* @__PURE__ */ __name(() => ({
   configureMapping(mapper) {
     mapper.createMap(
       {
@@ -173,7 +178,7 @@ var ReviewEntityToReviewDomain = () => ({
       Review
     );
   }
-});
+}), "ReviewEntityToReviewDomain");
 
 // src/infrastructure/database/mappings/DBMapper.ts
 var DBMapper = class {
@@ -190,6 +195,7 @@ var DBMapper = class {
     ReviewEntityToReviewDomain().configureMapping(this.mapper);
   }
 };
+__name(DBMapper, "DBMapper");
 DBMapper = __decorateClass([
   (0, import_inversify.injectable)()
 ], DBMapper);

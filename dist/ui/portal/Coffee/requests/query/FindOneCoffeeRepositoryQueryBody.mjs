@@ -1,4 +1,6 @@
-import "../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../chunk-C22X3M6A.mjs";
 
 // src/ui/portal/Coffee/requests/query/FindOneCoffeeRepositoryQueryBody.ts
 var FindOneCoffeeRepositoryQueryBody = class {
@@ -6,6 +8,7 @@ var FindOneCoffeeRepositoryQueryBody = class {
     this.coffeeId = coffeeId;
   }
 };
+__name(FindOneCoffeeRepositoryQueryBody, "FindOneCoffeeRepositoryQueryBody");
 export {
   FindOneCoffeeRepositoryQueryBody
 };

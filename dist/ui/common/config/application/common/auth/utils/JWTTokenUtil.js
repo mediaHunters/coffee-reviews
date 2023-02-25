@@ -5,6 +5,7 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -84,6 +85,7 @@ var JWTTokenUtil = class {
     return matches && matches[2];
   }
 };
+__name(JWTTokenUtil, "JWTTokenUtil");
 JWTTokenUtil = __decorateClass([
   (0, import_inversify.injectable)()
 ], JWTTokenUtil);

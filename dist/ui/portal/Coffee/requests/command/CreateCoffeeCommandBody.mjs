@@ -1,4 +1,6 @@
-import "../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../chunk-C22X3M6A.mjs";
 
 // src/ui/portal/Coffee/requests/command/CreateCoffeeCommandBody.ts
 var CreateCoffeeCommandBody = class {
@@ -13,6 +15,7 @@ var CreateCoffeeCommandBody = class {
     this.reflink = reflink;
   }
 };
+__name(CreateCoffeeCommandBody, "CreateCoffeeCommandBody");
 export {
   CreateCoffeeCommandBody
 };

@@ -1,7 +1,7 @@
 import {
   GetReviewsRepositoryQuery
-} from "../../../../../chunk-RMFJAZST.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-2UQA45D3.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   GetReviewsRepositoryQuery
 };

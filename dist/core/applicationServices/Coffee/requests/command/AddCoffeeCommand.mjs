@@ -1,7 +1,7 @@
 import {
   CreateCoffeeCommand
-} from "../../../../../chunk-2EE6L7RO.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-XHHTRPTP.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   CreateCoffeeCommand
 };

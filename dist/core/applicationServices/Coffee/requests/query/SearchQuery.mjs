@@ -1,4 +1,6 @@
-import "../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../chunk-C22X3M6A.mjs";
 
 // src/core/applicationServices/Coffee/requests/query/SearchQuery.ts
 var SearchQuery = class {
@@ -8,6 +10,7 @@ var SearchQuery = class {
     this.take = take;
   }
 };
+__name(SearchQuery, "SearchQuery");
 export {
   SearchQuery
 };

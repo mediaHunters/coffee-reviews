@@ -1,4 +1,6 @@
-import "../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../chunk-C22X3M6A.mjs";
 
 // src/infrastructure/database/migrations/1675876500606-alpha.ts
 var alpha1675876500606 = class {
@@ -34,6 +36,7 @@ var alpha1675876500606 = class {
     await queryRunner.query(`DROP TYPE "public"."coffee_type_enum"`);
   }
 };
+__name(alpha1675876500606, "alpha1675876500606");
 export {
   alpha1675876500606
 };

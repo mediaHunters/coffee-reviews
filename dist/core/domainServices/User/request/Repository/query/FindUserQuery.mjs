@@ -1,4 +1,6 @@
-import "../../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../../chunk-C22X3M6A.mjs";
 
 // src/core/domainServices/User/request/Repository/query/FindUserQuery.ts
 var FindUserQuery = class {
@@ -7,6 +9,7 @@ var FindUserQuery = class {
     this.value = value;
   }
 };
+__name(FindUserQuery, "FindUserQuery");
 export {
   FindUserQuery
 };

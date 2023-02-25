@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/core/domainServices/Role/requests/repository/query/FindRoleByNameRepositoryQuery.ts"],"sourcesContent":["export class FindRoleByNameRepositoryQuery {\n  constructor(public readonly name: string) {}\n}\n"],"mappings":";;;;;AAAO,IAAM,gCAAN,MAAoC;AAAA,EACzC,YAA4B,MAAc;AAAd;AAAA,EAAe;AAC7C;AAFa;","names":[]}

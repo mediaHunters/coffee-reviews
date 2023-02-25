@@ -1,4 +1,6 @@
-import "../../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../../chunk-C22X3M6A.mjs";
 
 // src/core/domainServices/Coffee/requests/repository/command/AddReviewRepositoryCommand.ts
 var AddCoffeeReviewRepositoryCommand = class {
@@ -10,6 +12,7 @@ var AddCoffeeReviewRepositoryCommand = class {
     this.taste = taste;
   }
 };
+__name(AddCoffeeReviewRepositoryCommand, "AddCoffeeReviewRepositoryCommand");
 export {
   AddCoffeeReviewRepositoryCommand
 };

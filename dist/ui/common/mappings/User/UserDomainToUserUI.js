@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -36,6 +37,7 @@ var User = class {
     this.firstName = firstName;
   }
 };
+__name(User, "User");
 
 // src/core/CoreModuleSymbols.ts
 var DOMAIN_APPLICATION_SERVICE_IDENTIFIERS = {
@@ -81,7 +83,7 @@ var UI_MAPPINGS_IDENTIFIERS = {
 };
 
 // src/ui/common/mappings/User/UserDomainToUserUI.ts
-var UserDomainToUserUI = () => ({
+var UserDomainToUserUI = /* @__PURE__ */ __name(() => ({
   configureMapping(mapper) {
     mapper.createMap(
       {
@@ -91,7 +93,7 @@ var UserDomainToUserUI = () => ({
       User
     );
   }
-});
+}), "UserDomainToUserUI");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   UserDomainToUserUI

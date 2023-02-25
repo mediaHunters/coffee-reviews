@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -23,13 +24,13 @@ __export(getHttpContext_exports, {
   getCurrentUser: () => getCurrentUser
 });
 module.exports = __toCommonJS(getHttpContext_exports);
-var getCurrentUser = (request) => {
+var getCurrentUser = /* @__PURE__ */ __name((request) => {
   const httpContext = Reflect.getMetadata(
     "inversify-express-utils:httpcontext",
     request
   );
   return httpContext.user;
-};
+}, "getCurrentUser");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   getCurrentUser

@@ -8,13 +8,12 @@ import {
 
 import { IOrm } from 'infrastructure/database/orm/IOrm';
 
-const dir = process.env.NODE_ENV === 'development' ? 'src' : 'dist';
-const ext = process.env.NODE_ENV === 'development' ? 't' : 'j';
+import ormconfig from '../ormconfig';
 
 @injectable()
 export class CROrm implements IOrm {
   public async initialize(): Promise<void> {
-    await createConnection('default');
+    await createConnection(ormconfig);
 
     initializeTransactionalContext();
     patchTypeORMRepositoryWithBaseRepository();

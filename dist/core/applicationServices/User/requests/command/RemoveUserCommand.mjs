@@ -1,7 +1,7 @@
 import {
   RemoveUserCommand
-} from "../../../../../chunk-LUOTVOXW.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-I3JKQMAQ.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   RemoveUserCommand
 };

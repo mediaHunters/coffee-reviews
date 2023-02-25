@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -65,6 +66,7 @@ var DeleteCoffeeRepositoryCommand = class {
     this.id = id;
   }
 };
+__name(DeleteCoffeeRepositoryCommand, "DeleteCoffeeRepositoryCommand");
 
 // src/core/domainServices/Coffee/requests/repository/command/CreateCoffeeRepositoryCommand.ts
 var CreateCoffeeRepositoryCommand = class {
@@ -79,6 +81,7 @@ var CreateCoffeeRepositoryCommand = class {
     this.CoffeeStatus = CoffeeStatus;
   }
 };
+__name(CreateCoffeeRepositoryCommand, "CreateCoffeeRepositoryCommand");
 
 // src/infrastructure/database/repository/Coffee/CoffeeUnitOfWork.ts
 var CoffeeUnitOfWork = class {
@@ -129,6 +132,7 @@ var CoffeeUnitOfWork = class {
   //   );
   // }
 };
+__name(CoffeeUnitOfWork, "CoffeeUnitOfWork");
 CoffeeUnitOfWork = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(DOMAIN_REPOSITORY_IDENTIFIERS.COFFEE_REPOSITORY)),

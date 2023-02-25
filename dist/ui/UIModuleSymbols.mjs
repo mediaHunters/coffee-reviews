@@ -3,7 +3,7 @@ import {
   UI_IDENTIFIERS,
   UI_MAPPINGS_IDENTIFIERS
 } from "../chunk-OHNY4ITV.mjs";
-import "../chunk-IV6S7MV4.mjs";
+import "../chunk-C22X3M6A.mjs";
 export {
   UI_APPLICATION_IDENTIFIERS,
   UI_IDENTIFIERS,

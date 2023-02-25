@@ -1,7 +1,7 @@
 import {
   DeleteReviewRepositoryCommand
-} from "../../../../../chunk-TG3IONQT.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-CUL434AY.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   DeleteReviewRepositoryCommand
 };

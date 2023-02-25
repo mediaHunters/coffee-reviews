@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -65,6 +66,7 @@ var FindRoleByNameRepositoryQuery = class {
     this.name = name;
   }
 };
+__name(FindRoleByNameRepositoryQuery, "FindRoleByNameRepositoryQuery");
 
 // src/core/domainServices/User/request/Repository/command/AddUserRepositoryCommand.ts
 var AddUserRepositoryCommand = class {
@@ -75,6 +77,7 @@ var AddUserRepositoryCommand = class {
     this.roleId = roleId;
   }
 };
+__name(AddUserRepositoryCommand, "AddUserRepositoryCommand");
 
 // src/core/domainServices/User/request/Repository/query/CheckIfUserAlreadyExistsRepositoryQuery.ts
 var CheckIfUserAlreadyExistsRepositoryQuery = class {
@@ -83,6 +86,7 @@ var CheckIfUserAlreadyExistsRepositoryQuery = class {
     this.email = email;
   }
 };
+__name(CheckIfUserAlreadyExistsRepositoryQuery, "CheckIfUserAlreadyExistsRepositoryQuery");
 
 // src/core/common/errors/BaseError.ts
 var BaseError = class {
@@ -92,6 +96,7 @@ var BaseError = class {
     this.name = name;
   }
 };
+__name(BaseError, "BaseError");
 
 // src/infrastructure/common/errors/InfrastructureErrors.ts
 var InfrastructureErrors = /* @__PURE__ */ ((InfrastructureErrors2) => {
@@ -133,6 +138,7 @@ var UserUnitOfWork = class {
     return this.userRepository.removeUser(command);
   }
 };
+__name(UserUnitOfWork, "UserUnitOfWork");
 UserUnitOfWork = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(DOMAIN_REPOSITORY_IDENTIFIERS.USER_REPOSITORY)),

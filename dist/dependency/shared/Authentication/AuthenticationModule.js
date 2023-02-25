@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -38,6 +39,7 @@ module.exports = __toCommonJS(AuthenticationModule_exports);
 var import_inversify = require("inversify");
 var BaseModule = class extends import_inversify.ContainerModule {
 };
+__name(BaseModule, "BaseModule");
 
 // src/core/applicationServices/Authentication/AuthenticationService.ts
 var import_inversify2 = require("inversify");
@@ -75,6 +77,7 @@ var AddUserUnitOfWorkRepositoryCommand = class {
     this.nickname = nickname;
   }
 };
+__name(AddUserUnitOfWorkRepositoryCommand, "AddUserUnitOfWorkRepositoryCommand");
 
 // src/core/domainServices/User/request/Repository/query/FindUserByEmailRepositoryQuery.ts
 var FindUserByEmailRepositoryQuery = class {
@@ -82,6 +85,7 @@ var FindUserByEmailRepositoryQuery = class {
     this.email = email;
   }
 };
+__name(FindUserByEmailRepositoryQuery, "FindUserByEmailRepositoryQuery");
 
 // src/core/applicationServices/Authentication/AuthenticationService.ts
 var AuthenticationService = class {
@@ -107,6 +111,7 @@ var AuthenticationService = class {
     return user;
   }
 };
+__name(AuthenticationService, "AuthenticationService");
 AuthenticationService = __decorateClass([
   (0, import_inversify2.injectable)(),
   __decorateParam(0, (0, import_inversify2.inject)(DOMAIN_UNIT_OF_WORK_IDENTIFIERS.USER_UNIT_OF_WORK)),
@@ -129,6 +134,7 @@ var AuthenticationModule = class extends BaseModule {
     ).to(AuthenticationService);
   }
 };
+__name(AuthenticationModule, "AuthenticationModule");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   AuthenticationModule

@@ -1,4 +1,6 @@
-import "../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../chunk-C22X3M6A.mjs";
 
 // src/ui/portal/Coffee/requests/command/DeleteCoffeeCommandBody.ts
 var DeleteCoffeeCommandBody = class {
@@ -6,6 +8,7 @@ var DeleteCoffeeCommandBody = class {
     this.id = id;
   }
 };
+__name(DeleteCoffeeCommandBody, "DeleteCoffeeCommandBody");
 export {
   DeleteCoffeeCommandBody
 };

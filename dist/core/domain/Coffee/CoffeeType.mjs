@@ -1,7 +1,7 @@
 import {
   COFFEE_TYPE
 } from "../../../chunk-55VCL34Z.mjs";
-import "../../../chunk-IV6S7MV4.mjs";
+import "../../../chunk-C22X3M6A.mjs";
 export {
   COFFEE_TYPE
 };

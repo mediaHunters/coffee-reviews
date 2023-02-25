@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -68,6 +69,7 @@ var AddUserUnitOfWorkRepositoryCommand = class {
     this.nickname = nickname;
   }
 };
+__name(AddUserUnitOfWorkRepositoryCommand, "AddUserUnitOfWorkRepositoryCommand");
 
 // src/core/domainServices/User/request/Repository/query/FindUserByEmailRepositoryQuery.ts
 var FindUserByEmailRepositoryQuery = class {
@@ -75,6 +77,7 @@ var FindUserByEmailRepositoryQuery = class {
     this.email = email;
   }
 };
+__name(FindUserByEmailRepositoryQuery, "FindUserByEmailRepositoryQuery");
 
 // src/core/applicationServices/Authentication/AuthenticationService.ts
 var AuthenticationService = class {
@@ -100,6 +103,7 @@ var AuthenticationService = class {
     return user;
   }
 };
+__name(AuthenticationService, "AuthenticationService");
 AuthenticationService = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(DOMAIN_UNIT_OF_WORK_IDENTIFIERS.USER_UNIT_OF_WORK)),

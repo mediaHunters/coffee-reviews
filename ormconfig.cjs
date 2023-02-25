@@ -1,5 +1,4 @@
 const dir = process.env.NODE_ENV === 'development' ? 'src' : 'dist';
-const ext = process.env.NODE_ENV === 'development' ? 't' : 'j';
 
 module.exports = [
   {
@@ -12,17 +11,15 @@ module.exports = [
     logging: true,
     migrationsRun: true,
     ssl: true,
-    entities: [
-      `${__dirname}/${dir}/infrastructure/database/entities/**/*.${ext}s`,
-    ],
+    entities: [`${__dirname}/infrastructure/database/entities/**/*.{js,ts}`],
     migrations: [
-      `${__dirname}/${dir}/infrastructure/database/migrations/**/*.${ext}s`,
+      `${__dirname}/infrastructure/database/migrations/**/*.{js,ts}`,
     ],
     subscribers: [
-      `${__dirname}/${dir}/infrastructure/database/subscribers/**/*.${ext}s`,
+      `${__dirname}}infrastructure/database/subscribers/**/*.{js,ts}`,
     ],
-    seeds: [`${dir}/infrastructure/database/fixtures/seeds/*.${ext}s`],
-    factories: [`${dir}/infrastructure/database/fixtures/factories/*.${ext}s`],
+    seeds: [`${dir}/infrastructure/database/fixtures/seeds/*.{js,ts}`],
+    factories: [`${dir}/infrastructure/database/fixtures/factories/*{js,ts}`],
     cli: {
       entitiesDir: `${dir}/infrastructure/database/entities`,
       migrationsDir: `${dir}/infrastructure/database/migrations`,

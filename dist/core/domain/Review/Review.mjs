@@ -1,7 +1,7 @@
 import {
   Review
-} from "../../../chunk-XPRAXHRK.mjs";
-import "../../../chunk-IV6S7MV4.mjs";
+} from "../../../chunk-66WMRE7E.mjs";
+import "../../../chunk-C22X3M6A.mjs";
 export {
   Review
 };

@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -43,6 +44,7 @@ var User = class {
     this.role = role;
   }
 };
+__name(User, "User");
 
 // src/ui/UIModuleSymbols.ts
 var UI_IDENTIFIERS = {
@@ -93,6 +95,7 @@ var FetchUserQuery = class {
     this.id = id;
   }
 };
+__name(FetchUserQuery, "FetchUserQuery");
 
 // src/ui/common/config/application/express/auth/models/Principal.ts
 var Principal = class {
@@ -110,6 +113,7 @@ var Principal = class {
     return Promise.resolve(role === this.details?.role);
   }
 };
+__name(Principal, "Principal");
 
 // src/ui/common/config/application/express/auth/middlewares/ApplicationAuthProvider.ts
 var ApplicationAuthProvider = class {
@@ -139,6 +143,7 @@ var ApplicationAuthProvider = class {
     }
   }
 };
+__name(ApplicationAuthProvider, "ApplicationAuthProvider");
 __decorateClass([
   (0, import_inversify.inject)(DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.USER_SERVICE)
 ], ApplicationAuthProvider.prototype, "userService", 2);

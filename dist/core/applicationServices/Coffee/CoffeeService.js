@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -72,6 +73,7 @@ var CreateCoffeeUnitOfWorkRepositoryCommand = class {
     this.CoffeeStatus = CoffeeStatus;
   }
 };
+__name(CreateCoffeeUnitOfWorkRepositoryCommand, "CreateCoffeeUnitOfWorkRepositoryCommand");
 
 // src/core/domainServices/Coffee/requests/UnitOfWork/command/DeleteCoffeeUnitOfWorkRepositoryCommand.ts
 var DeleteCoffeeUnitOfWorkRepositoryCommand = class {
@@ -79,6 +81,7 @@ var DeleteCoffeeUnitOfWorkRepositoryCommand = class {
     this.id = id;
   }
 };
+__name(DeleteCoffeeUnitOfWorkRepositoryCommand, "DeleteCoffeeUnitOfWorkRepositoryCommand");
 
 // src/core/domainServices/Coffee/requests/UnitOfWork/query/FindCoffeeRepositoryQuery.ts
 var FindOneCoffeeRepositoryQuery = class {
@@ -86,6 +89,7 @@ var FindOneCoffeeRepositoryQuery = class {
     this.id = id;
   }
 };
+__name(FindOneCoffeeRepositoryQuery, "FindOneCoffeeRepositoryQuery");
 
 // src/core/applicationServices/Coffee/CoffeeService.ts
 var CoffeeService = class {
@@ -155,6 +159,7 @@ var CoffeeService = class {
   //   );
   // }
 };
+__name(CoffeeService, "CoffeeService");
 CoffeeService = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(DOMAIN_UNIT_OF_WORK_IDENTIFIERS.COFFEE_UNIT_OF_WORK)),

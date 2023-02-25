@@ -1,4 +1,6 @@
-import "../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../chunk-C22X3M6A.mjs";
 
 // src/ui/common/models/Coffee.ts
 var Coffee = class {
@@ -15,6 +17,7 @@ var Coffee = class {
     this.reflink = reflink;
   }
 };
+__name(Coffee, "Coffee");
 export {
   Coffee
 };

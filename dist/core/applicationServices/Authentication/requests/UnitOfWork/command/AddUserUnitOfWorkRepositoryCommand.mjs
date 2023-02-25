@@ -1,4 +1,6 @@
-import "../../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../../chunk-C22X3M6A.mjs";
 
 // src/core/applicationServices/Authentication/requests/UnitOfWork/command/AddUserUnitOfWorkRepositoryCommand.ts
 var AddUserUnitOfWorkRepositoryCommand = class {
@@ -8,6 +10,7 @@ var AddUserUnitOfWorkRepositoryCommand = class {
     this.password = password;
   }
 };
+__name(AddUserUnitOfWorkRepositoryCommand, "AddUserUnitOfWorkRepositoryCommand");
 export {
   AddUserUnitOfWorkRepositoryCommand
 };

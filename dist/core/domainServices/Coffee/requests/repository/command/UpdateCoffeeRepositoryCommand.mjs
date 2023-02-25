@@ -1,4 +1,6 @@
-import "../../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../../chunk-C22X3M6A.mjs";
 
 // src/core/domainServices/Coffee/requests/repository/command/UpdateCoffeeRepositoryCommand.ts
 var UpdateCoffeeRepositoryCommand = class {
@@ -7,6 +9,7 @@ var UpdateCoffeeRepositoryCommand = class {
     this.coffeeId = coffeeId;
   }
 };
+__name(UpdateCoffeeRepositoryCommand, "UpdateCoffeeRepositoryCommand");
 export {
   UpdateCoffeeRepositoryCommand
 };

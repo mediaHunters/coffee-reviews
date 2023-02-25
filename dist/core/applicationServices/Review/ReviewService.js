@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -70,6 +71,7 @@ var AddReviewRepositoryCommand = class {
     this.taste = taste;
   }
 };
+__name(AddReviewRepositoryCommand, "AddReviewRepositoryCommand");
 
 // src/core/domainServices/Review/requests/query/GetReviewsRepositoryQuery.ts
 var GetReviewsRepositoryQuery = class {
@@ -77,6 +79,7 @@ var GetReviewsRepositoryQuery = class {
     this.userId = userId;
   }
 };
+__name(GetReviewsRepositoryQuery, "GetReviewsRepositoryQuery");
 
 // src/core/domainServices/Review/requests/command/UpdateReviewRepositoryCommand.ts
 var UpdateReviewRepositoryCommand = class {
@@ -85,6 +88,7 @@ var UpdateReviewRepositoryCommand = class {
     this.reviewId = reviewId;
   }
 };
+__name(UpdateReviewRepositoryCommand, "UpdateReviewRepositoryCommand");
 
 // src/core/domainServices/Review/requests/command/DeleteReviewRepositoryCommand.ts
 var DeleteReviewRepositoryCommand = class {
@@ -92,6 +96,7 @@ var DeleteReviewRepositoryCommand = class {
     this.reviewId = reviewId;
   }
 };
+__name(DeleteReviewRepositoryCommand, "DeleteReviewRepositoryCommand");
 
 // src/core/applicationServices/Review/ReviewService.ts
 var ReviewService = class {
@@ -133,6 +138,7 @@ var ReviewService = class {
     );
   }
 };
+__name(ReviewService, "ReviewService");
 ReviewService = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(DOMAIN_REPOSITORY_IDENTIFIERS.REVIEW_REPOSITORY))

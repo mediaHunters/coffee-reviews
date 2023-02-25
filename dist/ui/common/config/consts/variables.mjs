@@ -7,7 +7,7 @@ import {
   SWAGGER_BASE_PATH,
   SWAGGER_HOST
 } from "../../../../chunk-LQ4FDPEO.mjs";
-import "../../../../chunk-IV6S7MV4.mjs";
+import "../../../../chunk-C22X3M6A.mjs";
 export {
   APP_TOKEN_LIFE,
   APP_TOKEN_SECRET,

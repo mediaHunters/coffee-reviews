@@ -1,4 +1,6 @@
-import "../../../../../../chunk-IV6S7MV4.mjs";
+import {
+  __name
+} from "../../../../../../chunk-C22X3M6A.mjs";
 
 // src/core/domainServices/Role/requests/repository/query/FindRoleRepositoryQuery.ts
 var FindRoleRepositoryQuery = class {
@@ -6,6 +8,7 @@ var FindRoleRepositoryQuery = class {
     this.id = id;
   }
 };
+__name(FindRoleRepositoryQuery, "FindRoleRepositoryQuery");
 export {
   FindRoleRepositoryQuery
 };

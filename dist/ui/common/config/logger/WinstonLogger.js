@@ -5,6 +5,7 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -56,6 +57,7 @@ var BaseLogger = class {
     return this.logger;
   }
 };
+__name(BaseLogger, "BaseLogger");
 
 // src/ui/UIModuleSymbols.ts
 var UI_IDENTIFIERS = {
@@ -123,6 +125,7 @@ var WinstonLogger = class extends BaseLogger {
     this.logger.info(message);
   }
 };
+__name(WinstonLogger, "WinstonLogger");
 WinstonLogger = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(UI_APPLICATION_IDENTIFIERS.LOGGER_FORMAT)),

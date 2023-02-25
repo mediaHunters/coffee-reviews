@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/core/domainServices/Coffee/requests/repository/command/DeleteCoffeeRepositoryCommand.ts"],"sourcesContent":["export class DeleteCoffeeRepositoryCommand {\n  constructor(public readonly id: string) {}\n}\n"],"mappings":";;;;;AAAO,IAAM,gCAAN,MAAoC;AAAA,EACzC,YAA4B,IAAY;AAAZ;AAAA,EAAa;AAC3C;AAFa;","names":[]}

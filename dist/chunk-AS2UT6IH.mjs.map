@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/core/common/errors/CoreError.ts"],"sourcesContent":["import { BaseError } from 'core/common/errors/BaseError';\n\nexport class CoreError extends BaseError {}\n"],"mappings":";;;;;;;;AAEO,IAAM,YAAN,cAAwB,UAAU;AAAC;AAA7B;","names":[]}

@@ -5,6 +5,7 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -60,6 +61,7 @@ var BaseApplication = class {
     return this.app;
   }
 };
+__name(BaseApplication, "BaseApplication");
 
 // src/ui/common/config/consts/variables.ts
 var import_dotenv = __toESM(require("dotenv"));
@@ -212,6 +214,7 @@ REQUEST BODY: ${JSON.stringify(req.body)}`
     }
   }
 };
+__name(ExpressApplication, "ExpressApplication");
 ExpressApplication = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(UI_APPLICATION_IDENTIFIERS.LOGGER_WINSTON)),

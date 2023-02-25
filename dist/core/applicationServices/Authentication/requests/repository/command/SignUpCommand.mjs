@@ -1,7 +1,7 @@
 import {
   SignUpCommand
-} from "../../../../../../chunk-7YSGPZ7X.mjs";
-import "../../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../../chunk-46I6ALFO.mjs";
+import "../../../../../../chunk-C22X3M6A.mjs";
 export {
   SignUpCommand
 };

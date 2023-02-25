@@ -1,7 +1,7 @@
 import {
   DeleteCoffeeCommand
-} from "../../../../../chunk-RRVSZO2D.mjs";
-import "../../../../../chunk-IV6S7MV4.mjs";
+} from "../../../../../chunk-GEWZTOIF.mjs";
+import "../../../../../chunk-C22X3M6A.mjs";
 export {
   DeleteCoffeeCommand
 };

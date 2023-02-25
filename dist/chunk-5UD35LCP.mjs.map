@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/dependency/BaseModule.ts"],"sourcesContent":["import { ContainerModule, interfaces } from 'inversify';\n\nexport abstract class BaseModule extends ContainerModule {\n  public abstract init(bind: interfaces.Bind): void;\n}\n"],"mappings":";AAAA,SAAS,uBAAmC;AAErC,IAAe,aAAf,cAAkC,gBAAgB;AAEzD;","names":[]}

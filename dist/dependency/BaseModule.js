@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -26,6 +27,7 @@ module.exports = __toCommonJS(BaseModule_exports);
 var import_inversify = require("inversify");
 var BaseModule = class extends import_inversify.ContainerModule {
 };
+__name(BaseModule, "BaseModule");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   BaseModule

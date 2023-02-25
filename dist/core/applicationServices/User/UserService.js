@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -41,10 +42,12 @@ var GetUserRepositoryQuery = class {
     this.id = id;
   }
 };
+__name(GetUserRepositoryQuery, "GetUserRepositoryQuery");
 
 // src/core/domainServices/User/request/Repository/query/GetUsersRepositoryQuery.ts
 var GetUsersRepositoryQuery = class {
 };
+__name(GetUsersRepositoryQuery, "GetUsersRepositoryQuery");
 
 // src/core/CoreModuleSymbols.ts
 var DOMAIN_APPLICATION_SERVICE_IDENTIFIERS = {
@@ -76,6 +79,7 @@ var DeleteUserUnitOfWorkRepositoryCommand = class {
     this.id = id;
   }
 };
+__name(DeleteUserUnitOfWorkRepositoryCommand, "DeleteUserUnitOfWorkRepositoryCommand");
 
 // src/core/applicationServices/User/UserService.ts
 var UserService = class {
@@ -95,6 +99,7 @@ var UserService = class {
     return this.userRepository.getUsers(new GetUsersRepositoryQuery());
   }
 };
+__name(UserService, "UserService");
 UserService = __decorateClass([
   (0, import_inversify.injectable)(),
   __decorateParam(0, (0, import_inversify.inject)(DOMAIN_REPOSITORY_IDENTIFIERS.USER_REPOSITORY)),

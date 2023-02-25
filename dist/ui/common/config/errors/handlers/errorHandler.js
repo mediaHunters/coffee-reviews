@@ -3,6 +3,7 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -33,10 +34,12 @@ var BaseError = class {
     this.name = name;
   }
 };
+__name(BaseError, "BaseError");
 
 // src/core/common/errors/CoreError.ts
 var CoreError = class extends BaseError {
 };
+__name(CoreError, "CoreError");
 
 // src/ui/common/config/errors/UserInterfaceError.ts
 var UserInterfaceError = class extends BaseError {
@@ -48,6 +51,7 @@ var UserInterfaceError = class extends BaseError {
     this.name = name;
   }
 };
+__name(UserInterfaceError, "UserInterfaceError");
 
 // src/ui/common/config/errors/models/ErrorResponse.ts
 var ErrorResponse = class {
@@ -56,9 +60,10 @@ var ErrorResponse = class {
     this.message = message;
   }
 };
+__name(ErrorResponse, "ErrorResponse");
 
 // src/ui/common/config/errors/handlers/errorHandler.ts
-var errorHandler = (app) => app.use(
+var errorHandler = /* @__PURE__ */ __name((app) => app.use(
   (error, req, res, next) => {
     next();
     switch (error.constructor) {
@@ -74,7 +79,7 @@ var errorHandler = (app) => app.use(
         );
     }
   }
-);
+), "errorHandler");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   errorHandler
