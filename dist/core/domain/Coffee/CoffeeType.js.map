@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/core/domain/Coffee/CoffeeType.ts"],"sourcesContent":["export enum COFFEE_TYPE {\n  BEANS = 'BEANS',\n  POWDER = 'POWDER',\n}\n"],"mappings":";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAK,cAAL,kBAAKA,iBAAL;AACL,EAAAA,aAAA,WAAQ;AACR,EAAAA,aAAA,YAAS;AAFC,SAAAA;AAAA,GAAA;","names":["COFFEE_TYPE"]}

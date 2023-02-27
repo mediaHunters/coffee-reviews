@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/core/applicationServices/Review/requests/command/DeleteReviewCommand.ts"],"sourcesContent":["export class DeleteReviewCommand {\n  constructor(public readonly reviewId: string) {}\n}\n"],"mappings":";AAAO,IAAM,sBAAN,MAA0B;AAAA,EAC/B,YAA4B,UAAkB;AAAlB;AAAA,EAAmB;AACjD;","names":[]}

@@ -1,1 +1,1 @@
-{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v16.13.1","command":"rimraf dist && tsup src/**/*.ts --format cjs,esm --dts","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}
+{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v19.6.0","command":"rimraf dist && swc ./src -d dist","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}

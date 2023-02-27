@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../../../src/core/domainServices/User/request/Repository/query/GetUserRepositoryQuery.ts"],"sourcesContent":["export class GetUserRepositoryQuery {\n  constructor(public readonly id: string) {}\n}\n"],"mappings":";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAM,yBAAN,MAA6B;AAAA,EAClC,YAA4B,IAAY;AAAZ;AAAA,EAAa;AAC3C;","names":[]}

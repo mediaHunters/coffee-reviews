@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../../../src/core/domainServices/Coffee/requests/repository/command/GetCoffeeQuery.ts"],"sourcesContent":["export class GetCoffeeQuery {\n  constructor(public readonly id: string) {}\n}\n"],"mappings":";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAM,iBAAN,MAAqB;AAAA,EAC1B,YAA4B,IAAY;AAAZ;AAAA,EAAa;AAC3C;","names":[]}
