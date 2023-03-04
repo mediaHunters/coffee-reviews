@@ -39,7 +39,7 @@ export class UserUnitOfWork implements IUserUnitOfWork {
       );
     }
     const { id } = await this.roleRepository.findRoleByName(
-      new FindRoleByNameRepositoryQuery(USER_ROLE.ADMIN)
+      new FindRoleByNameRepositoryQuery(USER_ROLE.MEMBER)
     );
     return this.userRepository.addUser(
       new AddUserRepositoryCommand(nickname, email, password, id)

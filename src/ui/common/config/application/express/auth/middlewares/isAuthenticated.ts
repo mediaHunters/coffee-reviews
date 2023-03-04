@@ -35,7 +35,7 @@ export const isAuthenticated =
       );
       return;
     }
-
+    console.log(user)
     if (config) {
       const isInRole = await user.isInRole(config.role);
       if (!isInRole) {
