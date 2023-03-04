@@ -60,6 +60,7 @@ src/@types/
 
 # next.js build output
 .next
+dist
 
 # intellij
 .idea
