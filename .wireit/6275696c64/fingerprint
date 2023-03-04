@@ -1,1 +1,1 @@
-{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v19.6.0","command":"rimraf dist && swc ./src -d dist","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}
+{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v19.6.0","command":"rimraf dist && swc ./src -d dist && copyfiles -f src/ui/common/config/*.json dist/ui/common/config/","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}

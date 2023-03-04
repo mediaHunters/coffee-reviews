@@ -12,17 +12,18 @@
     "node": "./dist/index.cjs"
   },
   "scripts": {
-    "build": "wireit",
     "dev:start": "wireit",
-    "prod:start": "copyfiles -f src/ui/common/config/*.json dist/ui/common/config/ && node dist/index.js",
+    "prod:start": "wireit",
+    "build": "wireit",
     "start": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register src/index.ts",
-    "dev": "cross-env NODE_ENV=development npm run db:migrate && cross-env NODE_ENV=development nodemon --experimental-modules --es-module-specifier-resolution=node index.ts",
+    
     "format": "prettier **/*.ts --write",
-    "lint": "eslint --fix  ./**/*.ts",
+    "lint": "wireit",
+
     "db:seed": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register -r dotenv/config node_modules/typeorm-seeding/dist/cli.js seed -n ormconfig.cjs -c default",
     "db:reload": "cross-env NODE_ENV=development ts-node src/infrastructure/database/cli/dbReload.ts reload",
     "db:migrate": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register node_modules\\typeorm\\cli.js migration:run",
-    "db:generate": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n",
+    "db:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n",
     "db:packet": " npm run db:reload && npm run db:migrate && npm run db:seed",
     "clean": "wireit",
     "clean:deep": "wireit"
@@ -106,11 +107,47 @@
   "license": "ISC",
   "wireit": {
     "dev:start": {
-      "command": "cross-env NODE_ENV=production node dist/index.js"
+      "command": "cross-env NODE_ENV=development nodemon --experimental-modules --es-module-specifier-resolution=node dist/index.ts",
+      "dependencies": [
+        "dev:db:migrate"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
     },
+    "prod:start": {
+      "command": "node dist/index.js",
+      "dependencies": [
+        "build",
+        "prod:db:migrate"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+
     "build": {
-      "command": "rimraf dist && swc ./src -d dist"
+      "command": "rimraf dist && swc ./src -d dist && copyfiles -f src/ui/common/config/*.json dist/ui/common/config/"
     },
+
+    
+    "dev:db:migrate": {
+      "command": "npm run db:migrate",
+      "env": {
+        "NODE_ENV":"development"
+      }
+    },
+
+
+    "prod:db:migrate": {
+      "command": "cross-env NODE_ENV=production npm run db:migrate",
+      "env": {
+        "NODE_ENV":"production"
+      }
+    },
+
+
+
     "lint": {
       "command": "eslint --fix --color --max-warnings 0 --cache --cache-location .eslintcache .",
       "files": [
