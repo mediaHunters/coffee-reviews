@@ -1,4 +1,5 @@
 "use strict";
+<<<<<<< HEAD
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -92,3 +93,25 @@ var UserEntityToUserDomain = () => ({
   UserEntityToUserDomain
 });
 //# sourceMappingURL=UserEntityToUserDomain.js.map
+=======
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "UserEntityToUserDomain", {
+    enumerable: true,
+    get: ()=>UserEntityToUserDomain
+});
+const _coreModuleSymbols = require("../../../../core/CoreModuleSymbols");
+const _user = require("../../../../core/domain/User/User");
+const _infrastructureModuleSymbols = require("../../../InfrastructureModuleSymbols");
+const UserEntityToUserDomain = ()=>({
+        configureMapping (mapper) {
+            mapper.createMap({
+                destination: _coreModuleSymbols.DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
+                source: _infrastructureModuleSymbols.DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY
+            }, _user.User).forMember('role', (opt)=>opt.mapFrom((src)=>src.role.name));
+        }
+    });
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3NyYy9pbmZyYXN0cnVjdHVyZS9kYXRhYmFzZS9tYXBwaW5ncy9Vc2VyL1VzZXJFbnRpdHlUb1VzZXJEb21haW4udHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTWFwcGVyIH0gZnJvbSAnQHd1ZmUvbWFwcGVyJztcblxuaW1wb3J0IHsgSU1hcHBpbmcgfSBmcm9tICdjb3JlL2NvbW1vbi9tYXBwZXIvSU1hcHBpbmcnO1xuXG5pbXBvcnQgeyBET01BSU5fTUFQUElOR19JREVOVElGSUVSUyB9IGZyb20gJ2NvcmUvQ29yZU1vZHVsZVN5bWJvbHMnO1xuXG5pbXBvcnQgeyBVc2VyIH0gZnJvbSAnY29yZS9kb21haW4vVXNlci9Vc2VyJztcbmltcG9ydCB7IFVzZXIgYXMgVXNlckVudGl0eSB9IGZyb20gJ2luZnJhc3RydWN0dXJlL2RhdGFiYXNlL2VudGl0aWVzL1VzZXInO1xuXG5pbXBvcnQgeyBEQVRBQkFTRV9NQVBQSU5HX0lERU5USUZJRVJTIH0gZnJvbSAnaW5mcmFzdHJ1Y3R1cmUvSW5mcmFzdHJ1Y3R1cmVNb2R1bGVTeW1ib2xzJztcblxuZXhwb3J0IGNvbnN0IFVzZXJFbnRpdHlUb1VzZXJEb21haW4gPSAoKTogSU1hcHBpbmcgPT4gKHtcbiAgY29uZmlndXJlTWFwcGluZyhtYXBwZXI6IE1hcHBlcik6IHZvaWQge1xuICAgIG1hcHBlclxuICAgICAgLmNyZWF0ZU1hcDxVc2VyRW50aXR5LCBVc2VyPihcbiAgICAgICAge1xuICAgICAgICAgIGRlc3RpbmF0aW9uOiBET01BSU5fTUFQUElOR19JREVOVElGSUVSUy5VU0VSX0RPTUFJTixcbiAgICAgICAgICBzb3VyY2U6IERBVEFCQVNFX01BUFBJTkdfSURFTlRJRklFUlMuVVNFUl9FTlRJVFksXG4gICAgICAgIH0sXG4gICAgICAgIFVzZXJcbiAgICAgIClcbiAgICAgIC5mb3JNZW1iZXIoJ3JvbGUnLCAob3B0KSA9PiBvcHQubWFwRnJvbSgoc3JjKSA9PiBzcmMucm9sZS5uYW1lKSk7XG4gIH0sXG59KTtcbiJdLCJuYW1lcyI6WyJVc2VyRW50aXR5VG9Vc2VyRG9tYWluIiwiY29uZmlndXJlTWFwcGluZyIsIm1hcHBlciIsImNyZWF0ZU1hcCIsImRlc3RpbmF0aW9uIiwiRE9NQUlOX01BUFBJTkdfSURFTlRJRklFUlMiLCJVU0VSX0RPTUFJTiIsInNvdXJjZSIsIkRBVEFCQVNFX01BUFBJTkdfSURFTlRJRklFUlMiLCJVU0VSX0VOVElUWSIsIlVzZXIiLCJmb3JNZW1iZXIiLCJvcHQiLCJtYXBGcm9tIiwic3JjIiwicm9sZSIsIm5hbWUiXSwibWFwcGluZ3MiOiI7Ozs7K0JBV2FBOzthQUFBQTs7bUNBUDhCO3NCQUV0Qjs2Q0FHd0I7QUFFdEMsTUFBTUEseUJBQXlCLElBQWlCLENBQUE7UUFDckRDLGtCQUFpQkMsTUFBYyxFQUFRO1lBQ3JDQSxPQUNHQyxTQUFTLENBQ1I7Z0JBQ0VDLGFBQWFDLDZDQUEwQixDQUFDQyxXQUFXO2dCQUNuREMsUUFBUUMseURBQTRCLENBQUNDLFdBQVc7WUFDbEQsR0FDQUMsVUFBSSxFQUVMQyxTQUFTLENBQUMsUUFBUSxDQUFDQyxNQUFRQSxJQUFJQyxPQUFPLENBQUMsQ0FBQ0MsTUFBUUEsSUFBSUMsSUFBSSxDQUFDQyxJQUFJO1FBQ2xFO0lBQ0YsQ0FBQSJ9
+>>>>>>> 2e7fe692186a5ad03369647a352d8219ceed35c6

@@ -1,0 +1,32 @@
+{
+  "env": {
+    "targets": {
+      "node": 19
+    }
+  },
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "baseUrl": "src",
+    "paths": {
+      "core/*": ["core/*"],
+      "dependency/*": ["dependency/*"],
+      "infrastructure/*": ["infrastructure/*"],
+      "ui/*": ["ui/*"],
+      "config/*": ["test/config/*"]
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true
+    },
+    "keepClassNames": false,
+    "target": "esnext"
+  },
+  "module": {
+    "type": "commonjs"
+  },
+  "sourceMaps": "inline"
+}

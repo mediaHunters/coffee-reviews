@@ -27,14 +27,4 @@
       { "transform": "@zerollup/ts-transform-paths" }
     ],
   },
-  "tsc-alias": {
-    "resolveFullPaths": true
-  },
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
 }

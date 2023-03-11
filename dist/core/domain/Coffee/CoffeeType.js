@@ -1,4 +1,5 @@
 "use strict";
+<<<<<<< HEAD
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -33,3 +34,19 @@ var COFFEE_TYPE = /* @__PURE__ */ ((COFFEE_TYPE2) => {
   COFFEE_TYPE
 });
 //# sourceMappingURL=CoffeeType.js.map
+=======
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "COFFEE_TYPE", {
+    enumerable: true,
+    get: ()=>COFFEE_TYPE
+});
+var COFFEE_TYPE;
+(function(COFFEE_TYPE) {
+    COFFEE_TYPE["BEANS"] = "BEANS";
+    COFFEE_TYPE["POWDER"] = "POWDER";
+})(COFFEE_TYPE || (COFFEE_TYPE = {}));
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9jb3JlL2RvbWFpbi9Db2ZmZWUvQ29mZmVlVHlwZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZW51bSBDT0ZGRUVfVFlQRSB7XG4gIEJFQU5TID0gJ0JFQU5TJyxcbiAgUE9XREVSID0gJ1BPV0RFUicsXG59XG4iXSwibmFtZXMiOlsiQ09GRkVFX1RZUEUiLCJCRUFOUyIsIlBPV0RFUiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7SUFBTztVQUFLQSxXQUFXO0lBQVhBLFlBQ1ZDLFdBQUFBO0lBRFVELFlBRVZFLFlBQUFBO0dBRlVGLGdCQUFBQSJ9
+>>>>>>> 2e7fe692186a5ad03369647a352d8219ceed35c6

@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v19.6.0","command":"cross-env NODE_ENV=production npm run db:migrate","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{"NODE_ENV":"production"}}

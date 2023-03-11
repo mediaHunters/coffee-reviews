@@ -43,7 +43,7 @@ export class AuthenticationService implements IAuthenticationService {
     if (!user || !(await compare(password, user?.password || ''))) {
       return undefined;
     }
-
+    console.log(user)
     return user;
   }
 }
