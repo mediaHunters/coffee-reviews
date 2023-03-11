@@ -1,30 +1,40 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, Column, ManyToOne, OneToMany } from 'typeorm';
 
-import { Role } from "infrastructure/database/entities/Role";
+import type { Role } from 'infrastructure/database/entities/Role';
+import type { Review } from 'infrastructure/database/entities/Review';
+import Model from 'infrastructure/database/entities/Base';
 
 @Entity()
-export class User {
-  @PrimaryGeneratedColumn()
-  id!: number;
-
-  @Column()
+export class User extends Model {
+  @Column('text', {
+    nullable: true,
+  })
   firstName?: string;
 
-  @Column()
+  @Column('text', {
+    nullable: true,
+  })
   lastName?: string;
 
-  @Column()
+  @Column('text', { unique: true })
   nickname!: string;
 
-  @Column()
+  @Column('text')
   email!: string;
 
-  @Column()
+  @Column('text')
   password!: string;
 
-  @ManyToOne(
-    () => Role,
-    role => role.user
-  )
+  @ManyToOne('Role', (role: Role) => role.user)
   role!: Role;
+
+  @OneToMany('Review', (review: Review) => review.user)
+  reviews!: Review[];
+
+  toJson(): any {
+    return {
+      ...this,
+      password: undefined,
+    };
+  }
 }

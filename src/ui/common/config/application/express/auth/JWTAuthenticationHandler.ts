@@ -1,34 +1,34 @@
-import { inject, injectable } from "inversify";
+import { inject, injectable } from 'inversify';
 
-import { getStatusText, UNAUTHORIZED } from "http-status-codes";
+import { NOT_FOUND } from 'http-status-codes';
 
 import {
   UI_APPLICATION_IDENTIFIERS,
   UI_IDENTIFIERS,
-  UI_MAPPINGS_IDENTIFIERS
-} from "ui/UIModuleSymbols";
-import { JWTTokenUtil } from "ui/common/config/application/common/auth/utils/JWTTokenUtil";
-import { IAuthenticationHandler } from "ui/common/config/application/common/auth/IAuthenticationHandler";
+  UI_MAPPINGS_IDENTIFIERS,
+} from 'ui/UIModuleSymbols';
+import { JWTTokenUtil } from 'ui/common/config/application/common/auth/utils/JWTTokenUtil';
+import { IAuthenticationHandler } from 'ui/common/config/application/common/auth/IAuthenticationHandler';
 import {
   APP_TOKEN_LIFE,
-  APP_TOKEN_SECRET
-} from "ui/common/config/consts/variables";
-import { UIMapper } from "ui/common/mappings/UIMapper";
-import { User as UserUI } from "ui/common/models/User";
-import { UserInterfaceError } from "ui/common/config/errors/UserInterfaceError";
+  APP_TOKEN_SECRET,
+} from 'ui/common/config/consts/variables';
+import { UIMapper } from 'ui/common/mappings/UIMapper';
+import { User as UserUI } from 'ui/common/models/User';
+import { UserInterfaceError } from 'ui/common/config/errors/UserInterfaceError';
 
-import { IAuthenticationService } from "core/applicationServices/Authentication/IAuthenticationService";
+import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
 
 import {
   DOMAIN_APPLICATION_SERVICE_IDENTIFIERS,
-  DOMAIN_MAPPING_IDENTIFIERS
-} from "core/CoreModuleSymbols";
+  DOMAIN_MAPPING_IDENTIFIERS,
+} from 'core/CoreModuleSymbols';
 
-import { User } from "core/domain/User/User";
-import { AuthenticationQuery } from "core/applicationServices/Authentication/requests/handler/query/AuthenticationQuery";
-import { Authentication } from "ui/common/config/application/common/auth/models/Authentication";
+import { User } from 'core/domain/User/User';
+import { AuthenticationQuery } from 'core/applicationServices/Authentication/requests/handler/query/AuthenticationQuery';
+import { Authentication } from 'ui/common/config/application/common/auth/models/Authentication';
 
-const PAYLOAD_KEY = "user";
+const PAYLOAD_KEY = 'user';
 
 @injectable()
 export class JWTAuthenticationHandler implements IAuthenticationHandler {
@@ -44,16 +44,13 @@ export class JWTAuthenticationHandler implements IAuthenticationHandler {
   async authenticate(request: AuthenticationQuery) {
     const user = await this.authenticationService.verifyCredentials(request);
     if (!user) {
-      throw new UserInterfaceError(
-        UNAUTHORIZED,
-        getStatusText(UNAUTHORIZED).toUpperCase()
-      );
+      throw new UserInterfaceError(NOT_FOUND, 'USER_NOT_FOUND');
     }
 
     const userUi = this.uiMapper.mapper.map<User, UserUI>(
       {
         destination: UI_MAPPINGS_IDENTIFIERS.USER_UI,
-        source: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN
+        source: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
       },
       user
     );
@@ -64,7 +61,8 @@ export class JWTAuthenticationHandler implements IAuthenticationHandler {
         APP_TOKEN_SECRET,
         APP_TOKEN_LIFE,
         PAYLOAD_KEY
-      )
+      ),
+      user
     );
   }
 }

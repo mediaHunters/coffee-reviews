@@ -1,9 +1,9 @@
-import { interfaces } from "inversify";
+import { interfaces } from 'inversify';
 
-import { DOMAIN_REPOSITORY_IDENTIFIERS } from "core/CoreModuleSymbols";
-import { IRoleRepository } from "core/domainServices/Role/IRoleRepository";
-import { BaseModule } from "dependency/BaseModule";
-import { RoleRepository } from "infrastructure/database/repository/role/RoleRepository";
+import { DOMAIN_REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
+import { BaseModule } from 'dependency/BaseModule';
+import { RoleRepository } from 'infrastructure/database/repository/role/RoleRepository';
 
 export class RoleModule extends BaseModule {
   constructor() {

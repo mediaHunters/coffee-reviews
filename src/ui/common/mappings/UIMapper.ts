@@ -1,14 +1,14 @@
-import { injectable } from "inversify";
-import { Mapper } from "@wufe/mapper";
+import { injectable } from 'inversify';
+import { Mapper } from '@wufe/mapper';
 
-import { UserDomainToUserUI } from "ui/common/mappings/User/UserDomainToUserUI";
+import { UserDomainToUserUI } from 'ui/common/mappings/User/UserDomainToUserUI';
 
 @injectable()
 export class UIMapper {
   public readonly mapper: Mapper;
 
   constructor() {
-    this.mapper = new Mapper().withConfiguration(configuration =>
+    this.mapper = new Mapper().withConfiguration((configuration) =>
       configuration
         .shouldIgnoreSourcePropertiesIfNotInDestination(true)
         .shouldAutomaticallyMapArrays(true)

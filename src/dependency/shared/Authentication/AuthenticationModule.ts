@@ -1,11 +1,11 @@
-import { interfaces } from "inversify";
+import { interfaces } from 'inversify';
 
-import { BaseModule } from "dependency/BaseModule";
+import { BaseModule } from 'dependency/BaseModule';
 
-import { IAuthenticationService } from "core/applicationServices/Authentication/IAuthenticationService";
-import { AuthenticationService } from "core/applicationServices/Authentication/AuthenticationService";
+import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
+import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
 
-import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from "core/CoreModuleSymbols";
+import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 export class AuthenticationModule extends BaseModule {
   constructor() {

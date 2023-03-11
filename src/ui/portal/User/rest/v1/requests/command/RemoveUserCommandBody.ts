@@ -1,3 +1,3 @@
 export type RemoveUserCommandBody = {
-  readonly id: number;
+  readonly id: string;
 };

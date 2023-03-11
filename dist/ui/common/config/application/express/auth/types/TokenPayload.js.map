@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../../../src/ui/common/config/application/express/auth/types/TokenPayload.ts"],"sourcesContent":["import { User } from 'ui/common/models/User';\n\nexport type TokenPayload = {\n  user: User;\n};\n"],"mappings":";;;;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

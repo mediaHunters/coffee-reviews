@@ -1,25 +1,27 @@
-import express from "express";
-import morgan from "morgan";
-import methodOverride from "method-override";
-import helmet from "helmet";
-import cors from "cors";
-import swaggerUi from "swagger-ui-express";
-import { inject, injectable } from "inversify";
+import express from 'express';
+import morgan from 'morgan';
+import methodOverride from 'method-override';
+import helmet from 'helmet';
+import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import { inject, injectable } from 'inversify';
 
-import { IApplication } from "ui/common/config/application/common/IApplication";
-import { BaseApplication } from "ui/common/config/application/common/BaseApplication";
-import { ILogger } from "ui/common/config/logger/ILogger";
+import { IApplication } from 'ui/common/config/application/common/IApplication';
+import { BaseApplication } from 'ui/common/config/application/common/BaseApplication';
+import { ILogger } from 'ui/common/config/logger/ILogger';
 import {
   SWAGGER_BASE_PATH,
-  SWAGGER_HOST
-} from "ui/common/config/consts/variables";
-import { UI_APPLICATION_IDENTIFIERS } from "ui/UIModuleSymbols";
+  SWAGGER_HOST,
+} from 'ui/common/config/consts/variables';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UIModuleSymbols';
 
-import swaggerDocument from "ui/common/config/swagger.json";
+import swaggerDocument from 'ui/common/config/swagger.json';
 
 @injectable()
-export class ExpressApplication extends BaseApplication<express.Application>
-  implements IApplication {
+export class ExpressApplication
+  extends BaseApplication<express.Application>
+  implements IApplication
+{
   private readonly logger: ILogger;
 
   private readonly router: express.Router;
@@ -37,7 +39,7 @@ export class ExpressApplication extends BaseApplication<express.Application>
   public initialize(): void {
     this.initializeSecurity();
     this.initializeBodyParsers();
-    if (process.env.NODE_ENV !== "test") {
+    if (process.env.NODE_ENV !== 'test') {
       this.initializeLogging();
     }
     this.initializeHandlers();
@@ -56,7 +58,7 @@ export class ExpressApplication extends BaseApplication<express.Application>
   public initializeLogging(): void {
     this.logger.initialize();
     morgan.token(
-      "body",
+      'body',
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (req): string => `\nREQUEST BODY: ${JSON.stringify((req as any).body)}`
     );
@@ -67,14 +69,14 @@ export class ExpressApplication extends BaseApplication<express.Application>
      */
     this.app.use(
       morgan(
-        ":method :url HTTP/:http-version :status :response-time ms :referrer :user-agent - :body",
+        ':method :url HTTP/:http-version :status :response-time ms :referrer :user-agent - :body',
         { stream: this.logger }
       )
     );
   }
 
   public initializeHandlers(): void {
-    Error("NOT IMPLEMENTED");
+    Error('NOT IMPLEMENTED');
   }
 
   public initializePlugins(): void {

@@ -1,10 +1,12 @@
-import { Mapper } from "@wufe/mapper";
-import { IMapperConfiguration } from "@wufe/mapper/types/conf/mapper.configuration";
+import { Mapper } from '@wufe/mapper';
+import { IMapperConfiguration } from '@wufe/mapper/types/conf/mapper.configuration';
 
-import { injectable } from "inversify";
+import { injectable } from 'inversify';
 
-import { RoleEntityToRoleDomain } from "infrastructure/database/mappings/Role/RoleEntityToRoleDomain";
-import { UserEntityToUserDomain } from "infrastructure/database/repository/User/UserEntityToUserDomain";
+import { RoleEntityToRoleDomain } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomain';
+import { UserEntityToUserDomain } from 'infrastructure/database/mappings/User/UserEntityToUserDomain';
+import { CoffeeEntityToCoffeeDomain } from 'infrastructure/database/mappings/Coffee/CoffeEntityToCoffeeDomain';
+import { ReviewEntityToReviewDomain } from 'infrastructure/database/mappings/Review/ReviewEntityToReviewDomain';
 
 @injectable()
 export class DBMapper {
@@ -24,5 +26,7 @@ export class DBMapper {
   private initialize(): void {
     UserEntityToUserDomain().configureMapping(this.mapper);
     RoleEntityToRoleDomain().configureMapping(this.mapper);
+    CoffeeEntityToCoffeeDomain().configureMapping(this.mapper);
+    ReviewEntityToReviewDomain().configureMapping(this.mapper);
   }
 }

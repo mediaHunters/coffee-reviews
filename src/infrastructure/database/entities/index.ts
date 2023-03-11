@@ -1,2 +1,3 @@
-export { Role } from "core/domain/Role/Role";
-export { User } from "core/domain/User/User";
+export { default as Model } from './Base';
+export { Review } from './Review';
+export { User } from './User';

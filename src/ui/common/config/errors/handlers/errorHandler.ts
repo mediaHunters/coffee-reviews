@@ -1,15 +1,15 @@
-import { Application, NextFunction, Request, Response } from "express";
+import { Application, NextFunction, Request, Response } from 'express';
 
 import {
   INTERNAL_SERVER_ERROR,
   NOT_FOUND,
-  UNPROCESSABLE_ENTITY
-} from "http-status-codes";
+  UNPROCESSABLE_ENTITY,
+} from 'http-status-codes';
 
-import { BaseError } from "core/common/errors/BaseError";
-import { CoreError } from "core/common/errors/CoreError";
-import { UserInterfaceError } from "ui/common/config/errors/UserInterfaceError";
-import { ErrorResponse } from "ui/common/config/errors/models/ErrorResponse";
+import { BaseError } from 'core/common/errors/BaseError';
+import { CoreError } from 'core/common/errors/CoreError';
+import { UserInterfaceError } from 'ui/common/config/errors/UserInterfaceError';
+import { ErrorResponse } from 'ui/common/config/errors/models/ErrorResponse';
 
 export const errorHandler = (app: Application) =>
   app.use(

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../src/ui/common/config/logger/ILogger.ts"],"sourcesContent":["export interface ILogger {\n  initialize(): void;\n  write(message: string): void;\n}\n"],"mappings":";;;;;;;;;;;;;;;;AAAA;AAAA;","names":[]}
