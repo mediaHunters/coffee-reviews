@@ -3,4 +3,3 @@ export enum COFFEE_BURNT_LVL {
   MEDUIM_ROAST = 'MEDIUM_ROAST',
   DARK_ROAST = 'DARK_ROAST',
 }
-
