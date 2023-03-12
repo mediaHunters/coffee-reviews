@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../src/infrastructure/database/repository/common/Query.ts"],"sourcesContent":["export type Query<T> = {\n  [P in keyof T]?: T[P] extends never ? Query<T[P]> : Query<T[P]>;\n};\n"],"mappings":";;;;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

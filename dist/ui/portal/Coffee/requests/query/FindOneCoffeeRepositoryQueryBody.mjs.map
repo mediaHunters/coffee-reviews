@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../../src/ui/portal/Coffee/requests/query/FindOneCoffeeRepositoryQueryBody.ts"],"sourcesContent":["export class FindOneCoffeeRepositoryQueryBody {\n  constructor(public readonly coffeeId: string) {}\n}\n"],"mappings":";;;AAAO,IAAM,mCAAN,MAAuC;AAAA,EAC5C,YAA4B,UAAkB;AAAlB;AAAA,EAAmB;AACjD;","names":[]}

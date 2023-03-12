@@ -1,51 +1,4 @@
 "use strict";
-<<<<<<< HEAD
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
-// src/infrastructure/InfrastructureModuleSymbols.ts
-var InfrastructureModuleSymbols_exports = {};
-__export(InfrastructureModuleSymbols_exports, {
-  DATABASE_IDENTIFIERS: () => DATABASE_IDENTIFIERS,
-  DATABASE_MAPPING_IDENTIFIERS: () => DATABASE_MAPPING_IDENTIFIERS,
-  INFRASTRUCTURE_IDENTIFIERS: () => INFRASTRUCTURE_IDENTIFIERS
-});
-module.exports = __toCommonJS(InfrastructureModuleSymbols_exports);
-var DATABASE_IDENTIFIERS = {
-  ORM: Symbol.for("Orm")
-};
-var INFRASTRUCTURE_IDENTIFIERS = {
-  DB_MAPPER: Symbol.for("DBMapper")
-};
-var DATABASE_MAPPING_IDENTIFIERS = {
-  USER_ENTITY: Symbol.for("UserEntity"),
-  ROLE_ENTITY: Symbol.for("RoleEntity"),
-  COFFEE_ENTITY: Symbol.for("CoffeeEntity"),
-  REVIEW_ENTITY: Symbol.for("ReviewEntity")
-};
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  DATABASE_IDENTIFIERS,
-  DATABASE_MAPPING_IDENTIFIERS,
-  INFRASTRUCTURE_IDENTIFIERS
-});
-//# sourceMappingURL=InfrastructureModuleSymbols.js.map
-=======
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -64,7 +17,8 @@ const DATABASE_IDENTIFIERS = {
     ORM: Symbol.for('Orm')
 };
 const INFRASTRUCTURE_IDENTIFIERS = {
-    DB_MAPPER: Symbol.for('DBMapper')
+    DB_MAPPER: Symbol.for('DBMapper'),
+    BUNNY_CDN: Symbol.for('BunnyCdn')
 };
 const DATABASE_MAPPING_IDENTIFIERS = {
     USER_ENTITY: Symbol.for('UserEntity'),
@@ -73,5 +27,4 @@ const DATABASE_MAPPING_IDENTIFIERS = {
     REVIEW_ENTITY: Symbol.for('ReviewEntity')
 };
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9pbmZyYXN0cnVjdHVyZS9JbmZyYXN0cnVjdHVyZU1vZHVsZVN5bWJvbHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IERBVEFCQVNFX0lERU5USUZJRVJTID0ge1xuICBPUk06IFN5bWJvbC5mb3IoJ09ybScpLFxufTtcblxuZXhwb3J0IGNvbnN0IElORlJBU1RSVUNUVVJFX0lERU5USUZJRVJTID0ge1xuICBEQl9NQVBQRVI6IFN5bWJvbC5mb3IoJ0RCTWFwcGVyJyksXG59O1xuXG5leHBvcnQgY29uc3QgREFUQUJBU0VfTUFQUElOR19JREVOVElGSUVSUyA9IHtcbiAgVVNFUl9FTlRJVFk6IFN5bWJvbC5mb3IoJ1VzZXJFbnRpdHknKSxcbiAgUk9MRV9FTlRJVFk6IFN5bWJvbC5mb3IoJ1JvbGVFbnRpdHknKSxcbiAgQ09GRkVFX0VOVElUWTogU3ltYm9sLmZvcignQ29mZmVlRW50aXR5JyksXG4gIFJFVklFV19FTlRJVFk6IFN5bWJvbC5mb3IoJ1Jldmlld0VudGl0eScpLFxufTtcbiJdLCJuYW1lcyI6WyJEQVRBQkFTRV9JREVOVElGSUVSUyIsIklORlJBU1RSVUNUVVJFX0lERU5USUZJRVJTIiwiREFUQUJBU0VfTUFQUElOR19JREVOVElGSUVSUyIsIk9STSIsIlN5bWJvbCIsImZvciIsIkRCX01BUFBFUiIsIlVTRVJfRU5USVRZIiwiUk9MRV9FTlRJVFkiLCJDT0ZGRUVfRU5USVRZIiwiUkVWSUVXX0VOVElUWSJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7SUFBYUEsb0JBQW9CLE1BQXBCQTtJQUlBQywwQkFBMEIsTUFBMUJBO0lBSUFDLDRCQUE0QixNQUE1QkE7O0FBUk4sTUFBTUYsdUJBQXVCO0lBQ2xDRyxLQUFLQyxPQUFPQyxHQUFHLENBQUM7QUFDbEI7QUFFTyxNQUFNSiw2QkFBNkI7SUFDeENLLFdBQVdGLE9BQU9DLEdBQUcsQ0FBQztBQUN4QjtBQUVPLE1BQU1ILCtCQUErQjtJQUMxQ0ssYUFBYUgsT0FBT0MsR0FBRyxDQUFDO0lBQ3hCRyxhQUFhSixPQUFPQyxHQUFHLENBQUM7SUFDeEJJLGVBQWVMLE9BQU9DLEdBQUcsQ0FBQztJQUMxQkssZUFBZU4sT0FBT0MsR0FBRyxDQUFDO0FBQzVCIn0=
->>>>>>> 2e7fe692186a5ad03369647a352d8219ceed35c6
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9pbmZyYXN0cnVjdHVyZS9JbmZyYXN0cnVjdHVyZU1vZHVsZVN5bWJvbHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IERBVEFCQVNFX0lERU5USUZJRVJTID0ge1xuICBPUk06IFN5bWJvbC5mb3IoJ09ybScpLFxufTtcblxuZXhwb3J0IGNvbnN0IElORlJBU1RSVUNUVVJFX0lERU5USUZJRVJTID0ge1xuICBEQl9NQVBQRVI6IFN5bWJvbC5mb3IoJ0RCTWFwcGVyJyksXG4gIEJVTk5ZX0NETjogU3ltYm9sLmZvcignQnVubnlDZG4nKSxcbn07XG5cbmV4cG9ydCBjb25zdCBEQVRBQkFTRV9NQVBQSU5HX0lERU5USUZJRVJTID0ge1xuICBVU0VSX0VOVElUWTogU3ltYm9sLmZvcignVXNlckVudGl0eScpLFxuICBST0xFX0VOVElUWTogU3ltYm9sLmZvcignUm9sZUVudGl0eScpLFxuICBDT0ZGRUVfRU5USVRZOiBTeW1ib2wuZm9yKCdDb2ZmZWVFbnRpdHknKSxcbiAgUkVWSUVXX0VOVElUWTogU3ltYm9sLmZvcignUmV2aWV3RW50aXR5JyksXG59O1xuIl0sIm5hbWVzIjpbIkRBVEFCQVNFX0lERU5USUZJRVJTIiwiSU5GUkFTVFJVQ1RVUkVfSURFTlRJRklFUlMiLCJEQVRBQkFTRV9NQVBQSU5HX0lERU5USUZJRVJTIiwiT1JNIiwiU3ltYm9sIiwiZm9yIiwiREJfTUFQUEVSIiwiQlVOTllfQ0ROIiwiVVNFUl9FTlRJVFkiLCJST0xFX0VOVElUWSIsIkNPRkZFRV9FTlRJVFkiLCJSRVZJRVdfRU5USVRZIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztJQUFhQSxvQkFBb0IsTUFBcEJBO0lBSUFDLDBCQUEwQixNQUExQkE7SUFLQUMsNEJBQTRCLE1BQTVCQTs7QUFUTixNQUFNRix1QkFBdUI7SUFDbENHLEtBQUtDLE9BQU9DLEdBQUcsQ0FBQztBQUNsQjtBQUVPLE1BQU1KLDZCQUE2QjtJQUN4Q0ssV0FBV0YsT0FBT0MsR0FBRyxDQUFDO0lBQ3RCRSxXQUFXSCxPQUFPQyxHQUFHLENBQUM7QUFDeEI7QUFFTyxNQUFNSCwrQkFBK0I7SUFDMUNNLGFBQWFKLE9BQU9DLEdBQUcsQ0FBQztJQUN4QkksYUFBYUwsT0FBT0MsR0FBRyxDQUFDO0lBQ3hCSyxlQUFlTixPQUFPQyxHQUFHLENBQUM7SUFDMUJNLGVBQWVQLE9BQU9DLEdBQUcsQ0FBQztBQUM1QiJ9

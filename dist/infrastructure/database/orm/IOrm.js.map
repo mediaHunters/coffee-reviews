@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/infrastructure/database/orm/IOrm.ts"],"sourcesContent":["export interface IOrm {\n  initialize(): Promise<void>;\n}\n"],"mappings":";;;;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

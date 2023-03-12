@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../../../../src/ui/portal/Authentication/rest/v1/requests/command/SignUpCommandBody.ts"],"sourcesContent":["export type SignUpCommandBody = {\n  readonly nickname: string;\n  readonly email: string;\n  readonly password: string;\n};\n"],"mappings":";;;;;;;;;;;;;;;;AAAA;AAAA;","names":[]}

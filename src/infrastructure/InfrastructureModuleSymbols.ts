@@ -4,6 +4,7 @@ export const DATABASE_IDENTIFIERS = {
 
 export const INFRASTRUCTURE_IDENTIFIERS = {
   DB_MAPPER: Symbol.for('DBMapper'),
+  BUNNY_CDN: Symbol.for('BunnyCdn'),
 };
 
 export const DATABASE_MAPPING_IDENTIFIERS = {

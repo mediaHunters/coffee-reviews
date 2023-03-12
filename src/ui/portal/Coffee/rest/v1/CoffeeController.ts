@@ -6,11 +6,16 @@ import {
   httpGet,
   httpPost,
   httpPut,
+  request,
   requestBody,
   requestParam,
   results,
 } from 'inversify-express-utils';
 import { OK } from 'http-status-codes';
+
+import { Request } from 'express';
+
+import { UploadedFile } from 'express-fileupload';
 
 import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { ICoffeeService } from 'core/applicationServices/Coffee/ICoffeeService';
@@ -64,23 +69,28 @@ export class CoffeeController extends BaseHttpController {
 
   @httpPost('/create', isAuthenticated({ role: USER_ROLE.MEMBER }))
   async add(
+    @request() { files }: Request,
     @requestBody()
     {
       brand,
       name,
       type,
-      imgUrl,
       description,
       burntLvl,
       reflink,
       CoffeeStatus,
     }: CreateCoffeeCommandBody
   ): Promise<results.JsonResult> {
+    if (!files || !('image' in files)) {
+      throw new Error('No image file found');
+    }
+    const { image } = files;
+
     const coffeeCommand = new CreateCoffeeCommand(
       brand,
       name,
       type,
-      imgUrl,
+      image as UploadedFile,
       description,
       burntLvl,
       reflink || '',

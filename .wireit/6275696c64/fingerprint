@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v16.13.1","command":"rimraf dist && tsup src/**/*.ts --format cjs,esm --dts","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}
-=======
 {"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v19.6.0","command":"rimraf dist && swc ./src -d dist && copyfiles -f src/ui/common/config/*.json dist/ui/common/config/","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}
->>>>>>> 2e7fe692186a5ad03369647a352d8219ceed35c6

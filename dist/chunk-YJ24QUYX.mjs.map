@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/core/domain/Role/Role.ts"],"sourcesContent":["export class Role {\n  constructor(public readonly id: string, public readonly name: string) {}\n}\n"],"mappings":";AAAO,IAAM,OAAN,MAAW;AAAA,EAChB,YAA4B,IAA4B,MAAc;AAA1C;AAA4B;AAAA,EAAe;AACzE;","names":[]}

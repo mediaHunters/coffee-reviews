@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/core/domainServices/Review/requests/query/GetReviewsRepositoryQuery.ts"],"sourcesContent":["export class GetReviewsRepositoryQuery {\n  constructor(public readonly userId: string) {}\n}\n"],"mappings":";AAAO,IAAM,4BAAN,MAAgC;AAAA,EACrC,YAA4B,QAAgB;AAAhB;AAAA,EAAiB;AAC/C;","names":[]}

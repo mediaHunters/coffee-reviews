@@ -40,18 +40,18 @@ export class CoffeeService implements ICoffeeService {
     brand,
     name,
     type,
-    imgUrl,
+    image,
     description,
     burntLvl,
     reflink,
     CoffeeStatus,
   }: CreateCoffeeCommand): Promise<Coffee> {
-    return this.coffeRepository.createCoffee(
+    return this.coffeUnitOfWork.create(
       new CreateCoffeeUnitOfWorkRepositoryCommand(
         brand,
         name,
         type,
-        imgUrl,
+        image,
         description,
         burntLvl,
         CoffeeStatus,

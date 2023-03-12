@@ -13,6 +13,7 @@ import {
 
 import { UIMapper } from 'ui/common/mappings/UIMapper';
 import { UI_IDENTIFIERS } from 'ui/UIModuleSymbols';
+import { BunnyCdn } from 'infrastructure/cdn/BunnyCdn';
 
 export class CommonModule extends BaseModule {
   constructor() {
@@ -23,6 +24,7 @@ export class CommonModule extends BaseModule {
 
   public init(bind: interfaces.Bind): void {
     this.provideOrm(bind);
+    this.provideBunnyCdn(bind);
 
     this.provideDBMapper(bind);
     this.provideUIMapper(bind);
@@ -34,6 +36,10 @@ export class CommonModule extends BaseModule {
 
   private provideDBMapper(bind: interfaces.Bind): void {
     bind<DBMapper>(INFRASTRUCTURE_IDENTIFIERS.DB_MAPPER).to(DBMapper);
+  }
+
+  private provideBunnyCdn(bind: interfaces.Bind): void {
+    bind<BunnyCdn>(INFRASTRUCTURE_IDENTIFIERS.BUNNY_CDN).to(BunnyCdn);
   }
 
   private provideOrm(bind: interfaces.Bind): void {

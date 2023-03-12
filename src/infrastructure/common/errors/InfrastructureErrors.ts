@@ -4,4 +4,5 @@ export enum InfrastructureErrors {
   ROLE_NOT_FOUND,
   COFFEE_NOT_FOUND,
   REVIEW_NOT_FOUND,
+  BAD_REQUEST,
 }

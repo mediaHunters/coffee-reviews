@@ -1,47 +1,4 @@
 "use strict";
-<<<<<<< HEAD
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
-// src/core/domainServices/Coffee/requests/UnitOfWork/command/AddCoffeeUnitOfWorkRepositoryCommand.ts
-var AddCoffeeUnitOfWorkRepositoryCommand_exports = {};
-__export(AddCoffeeUnitOfWorkRepositoryCommand_exports, {
-  CreateCoffeeUnitOfWorkRepositoryCommand: () => CreateCoffeeUnitOfWorkRepositoryCommand
-});
-module.exports = __toCommonJS(AddCoffeeUnitOfWorkRepositoryCommand_exports);
-var CreateCoffeeUnitOfWorkRepositoryCommand = class {
-  constructor(brand, name, type, imgUrl, description, burntLvl, reflink, CoffeeStatus) {
-    this.brand = brand;
-    this.name = name;
-    this.type = type;
-    this.imgUrl = imgUrl;
-    this.description = description;
-    this.burntLvl = burntLvl;
-    this.reflink = reflink;
-    this.CoffeeStatus = CoffeeStatus;
-  }
-};
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  CreateCoffeeUnitOfWorkRepositoryCommand
-});
-//# sourceMappingURL=AddCoffeeUnitOfWorkRepositoryCommand.js.map
-=======
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -50,11 +7,11 @@ Object.defineProperty(exports, "CreateCoffeeUnitOfWorkRepositoryCommand", {
     get: ()=>CreateCoffeeUnitOfWorkRepositoryCommand
 });
 class CreateCoffeeUnitOfWorkRepositoryCommand {
-    constructor(brand, name, type, imgUrl, description, burntLvl, reflink, CoffeeStatus){
+    constructor(brand, name, type, image, description, burntLvl, reflink, CoffeeStatus){
         this.brand = brand;
         this.name = name;
         this.type = type;
-        this.imgUrl = imgUrl;
+        this.image = image;
         this.description = description;
         this.burntLvl = burntLvl;
         this.reflink = reflink;
@@ -62,5 +19,4 @@ class CreateCoffeeUnitOfWorkRepositoryCommand {
     }
 }
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb3JlL2RvbWFpblNlcnZpY2VzL0NvZmZlZS9yZXF1ZXN0cy9Vbml0T2ZXb3JrL2NvbW1hbmQvQWRkQ29mZmVlVW5pdE9mV29ya1JlcG9zaXRvcnlDb21tYW5kLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjbGFzcyBDcmVhdGVDb2ZmZWVVbml0T2ZXb3JrUmVwb3NpdG9yeUNvbW1hbmQge1xuICBjb25zdHJ1Y3RvcihcbiAgICBwdWJsaWMgcmVhZG9ubHkgYnJhbmQ6IHN0cmluZyxcbiAgICBwdWJsaWMgcmVhZG9ubHkgbmFtZTogc3RyaW5nLFxuICAgIHB1YmxpYyByZWFkb25seSB0eXBlOiBzdHJpbmcsXG4gICAgcHVibGljIHJlYWRvbmx5IGltZ1VybDogc3RyaW5nLFxuICAgIHB1YmxpYyByZWFkb25seSBkZXNjcmlwdGlvbjogc3RyaW5nLFxuICAgIHB1YmxpYyByZWFkb25seSBidXJudEx2bDogc3RyaW5nLFxuICAgIHB1YmxpYyByZWFkb25seSByZWZsaW5rOiBzdHJpbmcsXG4gICAgcHVibGljIHJlYWRvbmx5IENvZmZlZVN0YXR1czogc3RyaW5nXG4gICkge31cbn1cbiJdLCJuYW1lcyI6WyJDcmVhdGVDb2ZmZWVVbml0T2ZXb3JrUmVwb3NpdG9yeUNvbW1hbmQiLCJjb25zdHJ1Y3RvciIsImJyYW5kIiwibmFtZSIsInR5cGUiLCJpbWdVcmwiLCJkZXNjcmlwdGlvbiIsImJ1cm50THZsIiwicmVmbGluayIsIkNvZmZlZVN0YXR1cyJdLCJtYXBwaW5ncyI6Ijs7OzsrQkFBYUE7O2FBQUFBOztBQUFOLE1BQU1BO0lBQ1hDLFlBQ2tCQyxPQUNBQyxNQUNBQyxNQUNBQyxRQUNBQyxhQUNBQyxVQUNBQyxTQUNBQyxhQUNoQjtxQkFSZ0JQO29CQUNBQztvQkFDQUM7c0JBQ0FDOzJCQUNBQzt3QkFDQUM7dUJBQ0FDOzRCQUNBQztJQUNmO0FBQ0wifQ==
->>>>>>> 2e7fe692186a5ad03369647a352d8219ceed35c6
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb3JlL2RvbWFpblNlcnZpY2VzL0NvZmZlZS9yZXF1ZXN0cy9Vbml0T2ZXb3JrL2NvbW1hbmQvQWRkQ29mZmVlVW5pdE9mV29ya1JlcG9zaXRvcnlDb21tYW5kLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFVwbG9hZGVkRmlsZSB9IGZyb20gJ2V4cHJlc3MtZmlsZXVwbG9hZCc7XG5cbmV4cG9ydCBjbGFzcyBDcmVhdGVDb2ZmZWVVbml0T2ZXb3JrUmVwb3NpdG9yeUNvbW1hbmQge1xuICBjb25zdHJ1Y3RvcihcbiAgICBwdWJsaWMgcmVhZG9ubHkgYnJhbmQ6IHN0cmluZyxcbiAgICBwdWJsaWMgcmVhZG9ubHkgbmFtZTogc3RyaW5nLFxuICAgIHB1YmxpYyByZWFkb25seSB0eXBlOiBzdHJpbmcsXG4gICAgcHVibGljIHJlYWRvbmx5IGltYWdlOiBVcGxvYWRlZEZpbGUsXG4gICAgcHVibGljIHJlYWRvbmx5IGRlc2NyaXB0aW9uOiBzdHJpbmcsXG4gICAgcHVibGljIHJlYWRvbmx5IGJ1cm50THZsOiBzdHJpbmcsXG4gICAgcHVibGljIHJlYWRvbmx5IHJlZmxpbms6IHN0cmluZyxcbiAgICBwdWJsaWMgcmVhZG9ubHkgQ29mZmVlU3RhdHVzOiBzdHJpbmdcbiAgKSB7fVxufVxuIl0sIm5hbWVzIjpbIkNyZWF0ZUNvZmZlZVVuaXRPZldvcmtSZXBvc2l0b3J5Q29tbWFuZCIsImNvbnN0cnVjdG9yIiwiYnJhbmQiLCJuYW1lIiwidHlwZSIsImltYWdlIiwiZGVzY3JpcHRpb24iLCJidXJudEx2bCIsInJlZmxpbmsiLCJDb2ZmZWVTdGF0dXMiXSwibWFwcGluZ3MiOiI7Ozs7K0JBRWFBOzthQUFBQTs7QUFBTixNQUFNQTtJQUNYQyxZQUNrQkMsT0FDQUMsTUFDQUMsTUFDQUMsT0FDQUMsYUFDQUMsVUFDQUMsU0FDQUMsYUFDaEI7cUJBUmdCUDtvQkFDQUM7b0JBQ0FDO3FCQUNBQzsyQkFDQUM7d0JBQ0FDO3VCQUNBQzs0QkFDQUM7SUFDZjtBQUNMIn0=

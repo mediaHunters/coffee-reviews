@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/core/domain/User/UserRole.ts"],"sourcesContent":["export enum USER_ROLE {\n  ADMIN = 'ADMIN',\n  MEMBER = 'MEMBER',\n}\n"],"mappings":";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAK,YAAL,kBAAKA,eAAL;AACL,EAAAA,WAAA,WAAQ;AACR,EAAAA,WAAA,YAAS;AAFC,SAAAA;AAAA,GAAA;","names":["USER_ROLE"]}
