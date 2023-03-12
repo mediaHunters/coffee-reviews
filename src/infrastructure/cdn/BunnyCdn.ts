@@ -12,12 +12,12 @@ export class BunnyCdn {
   private readonly BUNNY_CDN_API_URL: string = process.env
     .BUNNY_CDN_API_URL as string;
 
-  async uploadImage(fileBuffer: UploadedFile): Promise<Response> {
-    const fileName = '123qweasd.png';
+  async uploadImage({ data, name }: UploadedFile): Promise<Response> {
+    const fileName = name;
     const options = {
       method: 'PUT',
       headers: { 'Content-Type': 'image/png', AccessKey: this.API_KEY },
-      body: fileBuffer.data,
+      body: data,
     };
 
     return fetch(
