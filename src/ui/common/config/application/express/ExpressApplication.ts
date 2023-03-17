@@ -5,7 +5,6 @@ import helmet from 'helmet';
 import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
 import { inject, injectable } from 'inversify';
-import fileUpload from 'express-fileupload';
 
 import { IApplication } from 'ui/common/config/application/common/IApplication';
 import { BaseApplication } from 'ui/common/config/application/common/BaseApplication';
@@ -58,7 +57,7 @@ export class ExpressApplication
   }
 
   public initializeFileUpload(): void {
-    this.app.use(fileUpload());
+    // this.app.use(fileUpload());
   }
 
   public initializeLogging(): void {

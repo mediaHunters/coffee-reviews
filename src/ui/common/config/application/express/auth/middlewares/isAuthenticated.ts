@@ -13,7 +13,6 @@ export const isAuthenticated =
     next: express.NextFunction
   ): Promise<void> => {
     const user = getCurrentUser(req);
-    // eslint-disable-next-line no-console
     if (!user) {
       next(
         new UserInterfaceError(
@@ -35,7 +34,6 @@ export const isAuthenticated =
       );
       return;
     }
-    console.log(user)
     if (config) {
       const isInRole = await user.isInRole(config.role);
       if (!isInRole) {

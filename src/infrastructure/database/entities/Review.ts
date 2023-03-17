@@ -34,3 +34,4 @@ export class Review extends Model {
   @JoinColumn({ name: 'user', referencedColumnName: 'id' })
   user!: User;
 }
+// to swap value to int, presice to 2 number after comma for rating

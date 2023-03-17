@@ -42,7 +42,7 @@ export class UserController extends BaseHttpController {
     return this.json(user);
   }
 
-  @httpPost('/removeUser', isAuthenticated({ role: USER_ROLE.MEMBER }))
+  @httpPost('/removeUser', isAuthenticated({ role: USER_ROLE.ADMIN }))
   public async Remove(@requestBody() { id }: RemoveUserCommandBody) {
     return this.UserService.removeUser(new RemoveUserCommand(id));
   }

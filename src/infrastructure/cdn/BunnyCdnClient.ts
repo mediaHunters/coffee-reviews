@@ -1,9 +1,10 @@
-import { UploadedFile } from 'express-fileupload';
+import * as fs from 'fs';
+
 import { injectable } from 'inversify';
 import fetch from 'isomorphic-fetch';
 
 @injectable()
-export class BunnyCdn {
+export class BunnyCdnClient {
   private readonly STORAGE_ZONE_NAME: string = process.env
     .BUNNY_CDN_STORAGE_ZONE_NAME as string;
 
@@ -12,17 +13,20 @@ export class BunnyCdn {
   private readonly BUNNY_CDN_API_URL: string = process.env
     .BUNNY_CDN_API_URL as string;
 
-  async uploadImage({ data, name }: UploadedFile): Promise<Response> {
-    const fileName = name;
+  async uploadImage(file: any): Promise<Response> {
+    const fileName = file.originalname;
+
     const options = {
       method: 'PUT',
-      headers: { 'Content-Type': 'image/png', AccessKey: this.API_KEY },
-      body: data,
+      headers: {
+        'content-type': 'image/png',
+        AccessKey: this.API_KEY,
+      },
+      body: fs.createReadStream(file.path),
     };
-
     return fetch(
       `${this.BUNNY_CDN_API_URL}/${this.STORAGE_ZONE_NAME}/coffee_images/${fileName}`,
-      options
+      options as any
     );
   }
 }

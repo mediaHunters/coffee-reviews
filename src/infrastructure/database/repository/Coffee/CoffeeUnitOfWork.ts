@@ -9,10 +9,10 @@ import { DeleteCoffeeRepositoryCommand } from 'core/domainServices/Coffee/reques
 import { IUserRepository } from 'core/domainServices/User/IUserRepository';
 import { CreateCoffeeRepositoryCommand } from 'core/domainServices/Coffee/requests/repository/command/CreateCoffeeRepositoryCommand';
 import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { BunnyCdn } from 'infrastructure/cdn/BunnyCdn';
 import { BaseError } from 'core/common/errors/BaseError';
 
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
+import { BunnyCdnClient } from 'infrastructure/cdn/BunnyCdnClient';
 
 @injectable()
 export class CoffeeUnitOfWork implements ICoffeeUnitOfWork {
@@ -21,8 +21,8 @@ export class CoffeeUnitOfWork implements ICoffeeUnitOfWork {
     private readonly coffeeRepository: ICoffeeRepository,
     @inject(DOMAIN_REPOSITORY_IDENTIFIERS.USER_REPOSITORY)
     private readonly userRepository: IUserRepository,
-    @inject(INFRASTRUCTURE_IDENTIFIERS.BUNNY_CDN)
-    private readonly bunnyCdnClient: BunnyCdn
+    @inject(INFRASTRUCTURE_IDENTIFIERS.BUNNY_CDN_CLIENT)
+    private readonly bunnyCdnClient: BunnyCdnClient
   ) {}
 
   async create({

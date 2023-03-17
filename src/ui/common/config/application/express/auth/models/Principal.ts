@@ -19,6 +19,7 @@ export class Principal implements interfaces.Principal {
   }
 
   public isInRole(role: string): Promise<boolean> {
+    console.log("prinsipal mistake",role)
     return Promise.resolve(role === this.details?.role);
   }
 }
