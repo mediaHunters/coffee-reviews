@@ -1,3 +1,3 @@
 export class FindOneCoffeeRepositoryQueryBody {
-  constructor(public readonly coffeeId: string) {}
+  constructor(public readonly id: string) {}
 }

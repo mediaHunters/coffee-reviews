@@ -12,6 +12,7 @@ import {
   results,
 } from 'inversify-express-utils';
 import { OK } from 'http-status-codes';
+import { Request } from 'express';
 
 import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { ICoffeeService } from 'core/applicationServices/Coffee/ICoffeeService';
@@ -55,17 +56,17 @@ export class CoffeeController extends BaseHttpController {
 
   @httpGet('/:id')
   async get(
-    @requestParam('id') { coffeeId }: FindOneCoffeeRepositoryQueryBody
+    @requestParam() { id }: FindOneCoffeeRepositoryQueryBody
   ): Promise<results.JsonResult> {
     const result = await this.coffeeService.findOne(
-      new FindOneCoffeeRepositoryQuery(coffeeId)
+      new FindOneCoffeeRepositoryQuery(id)
     );
     return this.json(result, OK);
   }
 
   @httpPost('/create', isAuthenticated(), uploadSingleImage('image'))
   async add(
-    @request() data: any,
+    @request() data: Request,
     @requestBody()
     {
       brand,
@@ -77,7 +78,6 @@ export class CoffeeController extends BaseHttpController {
       CoffeeStatus,
     }: CreateCoffeeCommandBody
   ): Promise<results.JsonResult> {
-    console.log(data.body)
     const coffeeCommand = new CreateCoffeeCommand(
       brand,
       name,
