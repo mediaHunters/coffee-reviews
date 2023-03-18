@@ -1,6 +1,6 @@
 const env = process.env.NODE_ENV !== 'development';
 const dir = env ? 'dist' : 'src';
-
+console.log(env)
 module.exports = [
   {
     type: 'postgres',

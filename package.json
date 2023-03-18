@@ -21,6 +21,7 @@
     "db:seed": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register -r dotenv/config node_modules/typeorm-seeding/dist/cli.js seed -n ormconfig.cjs -c default",
     "db:reload": "cross-env NODE_ENV=development ts-node src/infrastructure/database/cli/dbReload.ts reload",
     "dev:db:migrate": "wireit",
+    "prod:db:migrate": "wireit",
     "db:migrate": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register node_modules\\typeorm\\cli.js migration:run",
     "db:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n",
     "db:packet": " npm run db:reload && npm run db:migrate && npm run db:seed",

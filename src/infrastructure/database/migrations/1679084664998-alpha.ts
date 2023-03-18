@@ -5,9 +5,6 @@ export class alpha1679084664998 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      `CREATE TYPE "public"."coffee_type_enum" AS ENUM('BEANS', 'POWDER')`
-    );
-    await queryRunner.query(
       `CREATE TYPE "public"."coffee_burntlvl_enum" AS ENUM('LIGHT_ROAST', 'MEDIUM_ROAST', 'DARK_ROAST')`
     );
     await queryRunner.query(
