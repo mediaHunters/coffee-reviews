@@ -47,7 +47,7 @@ export class ReviewRepository
 
   async addReview({
     rating,
-    look,
+    acidity,
     smell,
     taste,
     userId,
@@ -57,7 +57,7 @@ export class ReviewRepository
 
     review.userId = userId;
     review.coffeeId = coffeeId;
-    review.look = look;
+    review.acidity = acidity;
     review.smell = smell;
     review.taste = taste;
     review.rating = rating;

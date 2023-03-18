@@ -10,7 +10,7 @@ export class Review extends Model {
   rating!: number;
 
   @Column('decimal')
-  look!: number;
+  acidity!: number;
 
   @Column('decimal')
   smell!: number;

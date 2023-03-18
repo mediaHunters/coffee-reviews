@@ -1,35 +1,32 @@
-const dir = process.env.NODE_ENV === 'development' ? 'src' : 'dist';
-const ext = process.env.NODE_ENV === 'development' ? 't' : 'j';
-
-console.log(process.env.NODE_ENV)
+const env = process.env.NODE_ENV !== 'development';
+const dir = env ? 'dist' : 'src';
 
 module.exports = [
   {
     type: 'postgres',
-    host: process.env.ORM_HOST || 'localhost',
+    host: env ? process.env.ORM_HOST : 'localhost',
     port: 5432,
-    username: process.env.ORM_USERNAME || 'postgres',
-    password: process.env.ORM_PASSWORD || 'postgres',
-    database: process.env.ORM_DB || 'coffee-reviews-db',
+    username: env ? process.env.ORM_USERNAME : 'postgres',
+    password: env ? process.env.ORM_PASSWORD : 'postgres',
+    database: env ? process.env.ORM_DB : 'coffee-reviews-db',
     logging: true,
     migrationsRun: true,
-    ssl: true,
+    ssl: env,
     entities: [
-      `${__dirname}/${dir}/infrastructure/database/entities/**/*.${ext}s`,
+      `${__dirname}/${dir}/infrastructure/database/entities/**/*.{js,ts}`,
     ],
     migrations: [
-      `${__dirname}/${dir}/infrastructure/database/migrations/**/*.${ext}s`,
+      `${__dirname}/${dir}/infrastructure/database/migrations/**/*.{js,ts}`,
     ],
     subscribers: [
-      `${__dirname}/${dir}/infrastructure/database/subscribers/**/*.${ext}s`,
+      `${__dirname}/${dir}/infrastructure/database/subscribers/**/*.{js,ts}`,
     ],
-    seeds: [`${dir}/infrastructure/database/fixtures/seeds/*.${ext}s`],
-    factories: [`${dir}/infrastructure/database/fixtures/factories/*.${ext}s`],
+    seeds: [`${dir}/infrastructure/database/fixtures/seeds/*.{js,ts}`],
+    factories: [`${dir}/infrastructure/database/fixtures/factories/*.{js,ts}`],
     cli: {
       entitiesDir: `${dir}/infrastructure/database/entities`,
       migrationsDir: `${dir}/infrastructure/database/migrations`,
       subscribersDir: `${dir}/infrastructure/database/subscribers`,
     },
-    cache: true,
   },
 ];

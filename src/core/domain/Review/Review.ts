@@ -1,7 +1,7 @@
 export class Review {
   constructor(
     public readonly id: string,
-    public readonly look: number,
+    public readonly acidity: number,
     public readonly smell: number,
     public readonly taste: number,
     public readonly rating: number,

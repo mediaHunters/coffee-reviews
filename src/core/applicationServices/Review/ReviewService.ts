@@ -32,7 +32,7 @@ export class ReviewService implements IReviewService {
     userId,
     coffeeId,
     rating,
-    look,
+    acidity,
     smell,
     taste,
   }: AddReviewCommand): Promise<Review> {
@@ -41,7 +41,7 @@ export class ReviewService implements IReviewService {
         userId,
         coffeeId,
         rating,
-        look,
+        acidity,
         smell,
         taste
       )

@@ -3,7 +3,7 @@ export class AddReviewRepositoryCommand {
     public readonly userId: string,
     public readonly coffeeId: string,
     public readonly rating: number,
-    public readonly look: number,
+    public readonly acidity: number,
     public readonly smell: number,
     public readonly taste: number
   ) {}

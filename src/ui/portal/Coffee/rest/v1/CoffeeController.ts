@@ -126,10 +126,10 @@ export class CoffeeController extends BaseHttpController {
   async addReview(
     @requestParam('coffeeId') coffeeId: string,
     @requestBody()
-    { rating, look, smell, taste, userId }: AddReviewCommandBody
+    { rating, acidity, smell, taste, userId }: AddReviewCommandBody
   ): Promise<results.JsonResult> {
     const result = await this.reviewService.add(
-      new AddReviewCommand(userId, coffeeId, rating, look, smell, taste)
+      new AddReviewCommand(userId, coffeeId, rating, acidity, smell, taste)
     );
     return this.json(result, OK);
   }
